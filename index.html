@@ -479,8 +479,8 @@
     const STRETCH = 200;
     const TRANSITION = 10;
     const CLOSING = 40;
-    const ASSET_ROOT = "./assets";
-    const assetPath = (path) => `${ASSET_ROOT}/${path}`;
+    const ASSET_ROOT = ".";
+    const assetPath = (path) => `${ASSET_ROOT}/${path.split("/").pop()}`;
 
     const classes = [
       {
@@ -841,7 +841,10 @@
       lastImage = event.image;
       lastMirror = event.mirrored;
       const mirrorClass = event.mirrored ? " mirrored" : "";
-      const fallback = event.image.replace("./assets/", "./yin-yoga-videos/assets/");
+      const fileName = event.image.split("/").pop();
+      const fallback = fileName === "instructor-avatar-reference.png"
+        ? "./yin-yoga-videos/assets/instructor-avatar-reference.png"
+        : `./yin-yoga-videos/assets/poses/${fileName}`;
       const image = document.createElement("img");
       image.className = mirrorClass.trim();
       image.alt = `${event.pose} demonstrated by a human-like yoga instructor avatar on a mat in a calm studio`;
