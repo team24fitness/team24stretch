@@ -176,6 +176,1173 @@
       box-shadow: 0 18px 40px rgba(16, 24, 18, 0.28);
     }
 
+    .cue-card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .scene-badge {
+      display: inline-flex;
+      min-height: 28px;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0 10px;
+      background: rgba(184, 100, 72, 0.95);
+    }
+
+    .details-toggle {
+      min-height: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      border-radius: 999px;
+      padding: 0 11px;
+      color: #fffdf8;
+      background: rgba(255, 255, 255, 0.14);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .cue-card.is-collapsed {
+      width: min(360px, calc(100% - 28px));
+      padding: 12px;
+    }
+
+    .cue-card.is-collapsed .cue-details {
+      display: none;
+    }
+
+    .cue-card.is-collapsed .pose-name {
+      margin-top: 8px;
+      font-size: clamp(22px, 2.4vw, 30px);
+    }
+
+    .pose-name {
+      margin-top: 10px;
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.02;
+    }
+
+    .cue-text {
+      margin: 10px 0 0;
+      font-size: clamp(16px, 1.7vw, 20px);
+      line-height: 1.35;
+    }
+
+    .support-text {
+      margin-top: 10px;
+      color: rgba(255, 253, 248, 0.78);
+      font-size: 13px;
+      line-height: 1.42;
+    }
+
+    .next-up {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.24);
+      color: rgba(255, 253, 248, 0.72);
+      font-size: 13px;
+    }
+
+    .next-up strong {
+      display: block;
+      margin-top: 3px;
+      color: #fffdf8;
+      font-size: 15px;
+    }
+
+    .progress-overlay {
+      position: absolute;
+      left: clamp(14px, 2.4vw, 28px);
+      right: clamp(14px, 2.4vw, 28px);
+      bottom: clamp(18px, 2.4vw, 28px);
+    }
+
+    .time-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      color: #fffdf8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.44);
+      text-transform: uppercase;
+    }
+
+    .bar {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.32);
+    }
+
+    .bar-fill {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #e2a16f, #dfe7c8 48%, #89a17e);
+      transition: width 180ms linear;
+    }
+
+    .control-deck {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 18px;
+      align-items: center;
+      padding: 16px clamp(14px, 2.4vw, 28px) 18px;
+      background: rgba(255, 252, 246, 0.82);
+    }
+
+    .class-menu {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 8px;
+      padding: 14px clamp(14px, 2.4vw, 28px) 0;
+      background: rgba(255, 252, 246, 0.82);
+    }
+
+    .class-option {
+      min-height: 54px;
+      border: 1px solid rgba(30, 41, 35, 0.16);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: var(--ink);
+      background: rgba(255, 253, 248, 0.74);
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .class-option[aria-pressed="true"] {
+      color: #fffdf8;
+      background: var(--leaf);
+      border-color: var(--leaf);
+    }
+
+    .class-option strong,
+    .class-option span {
+      display: block;
+    }
+
+    .class-option strong {
+      font-size: 13px;
+      line-height: 1.16;
+    }
+
+    .class-option span {
+      margin-top: 3px;
+      color: inherit;
+      opacity: 0.78;
+      font-size: 11px;
+      line-height: 1.2;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .control-button {
+      min-width: 46px;
+      min-height: 44px;
+      border: 1px solid rgba(30, 41, 35, 0.18);
+      border-radius: 8px;
+      padding: 0 15px;
+      color: var(--ink);
+      background: #fffdf8;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 800;
+    }
+
+    .control-button.primary {
+      color: #fffdf8;
+      background: var(--clay);
+      border-color: var(--clay);
+    }
+
+    .control-button:focus-visible,
+    .scrub:focus-visible {
+      outline: 3px solid rgba(184, 100, 72, 0.28);
+      outline-offset: 2px;
+    }
+
+    .scrub {
+      width: 100%;
+      accent-color: var(--clay);
+    }
+
+    .voice-state {
+      color: var(--leaf);
+      white-space: nowrap;
+    }
+
+    .safety-note {
+      margin: 0;
+      padding: 0 clamp(14px, 2.4vw, 28px) 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.42;
+    }
+
+    @media (max-width: 860px) {
+      .video-frame {
+        min-height: 560px;
+        aspect-ratio: auto;
+      }
+
+      .pose-art img {
+        object-fit: contain;
+      }
+
+      .video-top {
+        flex-direction: column;
+      }
+
+      .clock {
+        text-align: left;
+      }
+
+      .cue-card {
+        left: clamp(14px, 2.4vw, 28px);
+        right: auto;
+        bottom: 92px;
+        width: min(380px, calc(100% - 28px));
+      }
+
+      .control-deck {
+        grid-template-columns: 1fr;
+      }
+
+      .class-menu {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .voice-state {
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        padding: 0;
+      }
+
+      .class-player,
+      .video-frame {
+        border-radius: 0;
+      }
+
+      .video-frame {
+        min-height: 640px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .cue-card {
+        bottom: 84px;
+        width: calc(100% - 28px);
+      }
+
+      .class-menu {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="class-player" aria-label="Yin yoga class player">
+      <div class="video-frame" data-composition-id="lower-body-yin-avatar-class" data-width="1280" data-height="720">
+        <div class="pose-art" id="poseArt" aria-label="Human avatar yoga instructor demonstration"></div>
+        <div class="soft-vignette" aria-hidden="true"></div>
+
+        <header class="video-top">
+          <div>
+            <div class="title-kicker">Certified yin yoga instructor</div>
+            <h1 id="classTitle">15-Minute Lower Body Yin</h1>
+          </div>
+          <div class="clock" aria-live="polite">
+            <strong id="remaining">15:00</strong>
+            <span>Remaining</span>
+          </div>
+        </header>
+
+        <section class="cue-card" id="cueCard" aria-live="polite">
+          <div class="cue-card-top">
+            <div class="scene-badge" id="sceneBadge">Stretch 1</div>
+            <button class="details-toggle" id="detailsToggle" type="button" aria-expanded="true" aria-controls="cueDetails">Hide details</button>
+          </div>
+          <h2 class="pose-name" id="poseName">Dragon lunge</h2>
+          <div class="cue-details" id="cueDetails">
+            <p class="cue-text" id="cueText">Step your right foot forward and slide the left knee back. Keep the front knee stacked safely and support both hands on blocks.</p>
+            <div class="support-text" id="supportText">Full body stays visible on the mat. Move slowly, breathe naturally, and stay below sharp pain.</div>
+            <div class="next-up">Next up <strong id="nextUp">Half butterfly fold</strong></div>
+          </div>
+        </section>
+
+        <div class="progress-overlay">
+          <div class="time-row">
+            <span id="elapsed">0:00</span>
+            <span>15:00</span>
+          </div>
+          <div class="bar" aria-hidden="true"><div class="bar-fill" id="barFill"></div></div>
+        </div>
+      </div>
+
+      <nav class="class-menu" id="classMenu" aria-label="Choose a yin yoga class"></nav>
+
+      <footer class="control-deck">
+        <div class="button-row">
+          <button class="control-button primary" id="playButton" type="button">Play</button>
+          <button class="control-button" id="restartButton" type="button">Restart</button>
+          <button class="control-button" id="skipButton" type="button">Next stretch</button>
+          <button class="control-button" id="muteButton" type="button" aria-pressed="false">Voice on</button>
+        </div>
+        <input class="scrub" id="scrub" type="range" min="0" max="900" value="0" step="1" aria-label="Class timeline">
+        <div class="voice-state" id="voiceState">Voice reads cue and description</div>
+      </footer>
+      <p class="safety-note">General wellness guidance only. Use support, keep the breath smooth, and come out of any shape that creates sharp pain, numbness, or unsafe strain.</p>
+    </section>
+  </main>
+
+  <script>
+    const TOTAL = 900;
+    const STRETCH = 200;
+    const TRANSITION = 10;
+    const CLOSING = 40;
+    const ASSET_ROOT = ".";
+    const assetPath = (path) => `${ASSET_ROOT}/${path.split("/").pop()}`;
+
+    const classes = [
+      {
+        id: "lower",
+        title: "15-Minute Lower Body Yin",
+        menuTitle: "Lower Body",
+        menuSubtitle: "Hips and hamstrings",
+        stretches: [
+          {
+            name: "Dragon lunge",
+            image: assetPath("poses/dragon-lunge.png"),
+            support: "Pad the back knee. Hands can come to blocks, the floor, or your front thigh.",
+            side: true,
+            cues: [
+              [0, "Step your right foot forward and slide the left knee back. Keep the front knee stacked safely and support both hands on blocks."],
+              [45, "Soften your jaw and breathe toward the front of the left hip. Let the hips settle without forcing the low back."],
+              [100, "Slowly switch sides. Left foot forward, right knee back. Take your time and keep the movement controlled."],
+              [145, "Let the shoulders relax away from your ears. Stay with a slow, even exhale."],
+              [190, "Gently walk the hands in and prepare to release from dragon lunge."]
+            ]
+          },
+          {
+            name: "Half butterfly fold",
+            image: assetPath("poses/half-butterfly.png"),
+            support: "Sit on a folded blanket if your low back rounds too strongly. Bend the long leg as much as needed.",
+            side: true,
+            cues: [
+              [0, "Extend the right leg and bring the left sole toward the inner thigh. Fold forward only as far as your breath can stay easy."],
+              [45, "If the hamstring feels intense, bend the extended knee or come a little higher."],
+              [100, "Roll up slowly and change sides. Let the left leg extend and fold again with a relaxed neck."],
+              [150, "Notice the back of the leg, the outer hip, and the breath moving across the ribs."],
+              [190, "Use your hands to come up, one vertebra at a time."]
+            ]
+          },
+          {
+            name: "Swan pose",
+            image: assetPath("poses/swan-pigeon.png"),
+            support: "Support the front hip with a blanket. Keep the front knee comfortable and stay upright if folding is too much.",
+            side: true,
+            cues: [
+              [0, "Bring the right shin forward for swan pose. Slide the left leg back and support the right hip as much as you need."],
+              [45, "Come down to forearms or stay upright. The goal is a sustainable outer-hip stretch, not maximum depth."],
+              [100, "Switch sides with care. Bring the left shin forward, right leg back, and settle in slowly."],
+              [150, "Let the belly and throat soften. Nothing needs to be pushed."],
+              [190, "Press the hands down and slowly back out of the shape."]
+            ]
+          },
+          {
+            name: "Reclined hamstring stretch",
+            image: assetPath("poses/reclined-hamstring.png"),
+            support: "Use a strap, towel, or hands behind the thigh. Keep both sides of the pelvis heavy.",
+            side: true,
+            cues: [
+              [0, "Lie on your back and lift the right leg. Hold behind the thigh or loop a strap around the foot."],
+              [45, "Let the shoulders rest. A small bend in the knee is completely welcome."],
+              [100, "Switch legs. Lower the right leg and lift the left, keeping the breath smooth."],
+              [150, "Feel length without gripping. Let the face and hands stay soft."],
+              [190, "Release both feet to the mat and prepare for stillness."]
+            ]
+          }
+        ]
+      },
+      {
+        id: "upper",
+        title: "15-Minute Upper Body Yin",
+        menuTitle: "Upper Body",
+        menuSubtitle: "Shoulders and chest",
+        stretches: [
+          {
+            name: "Melting heart",
+            image: assetPath("poses/melting-heart.png"),
+            support: "Keep hips over knees. Rest the forehead on a blanket if the shoulders need more space.",
+            cues: [
+              [0, "Come to hands and knees and walk your hands forward into melting heart. Keep the hips stacked over the knees."],
+              [45, "Let the chest soften toward the mat while the breath widens across the side ribs."],
+              [100, "Stay with this shape or move the hands slightly wider if that gives the shoulders more room."],
+              [150, "Keep the low back quiet. Let the front of the chest open slowly without forcing it."],
+              [190, "Walk the hands back in and sit toward your heels with control."]
+            ]
+          },
+          {
+            name: "Thread the needle",
+            image: assetPath("poses/thread-the-needle.png"),
+            support: "Use a blanket under the head or shoulder if the floor feels far away.",
+            side: true,
+            cues: [
+              [0, "From hands and knees, thread the right arm underneath you. Rest the right shoulder and side of the head."],
+              [45, "Let the upper back rotate gently. The left hand can stay grounded or reach forward."],
+              [100, "Switch sides slowly. Thread the left arm through and settle with an easy neck."],
+              [150, "Breathe across the back of the shoulder blades and soften the jaw."],
+              [190, "Press into the grounded hand and unwind carefully."]
+            ]
+          },
+          {
+            name: "Supported fish",
+            image: assetPath("poses/supported-fish.png"),
+            support: "Place a bolster or rolled blanket under the shoulder blades, not under the low back.",
+            cues: [
+              [0, "Lower onto your support for supported fish. Let the chest broaden and the arms rest open."],
+              [45, "If the neck feels strained, place a folded blanket under the head or reduce the height."],
+              [100, "Stay still and let the collarbones widen from the center out."],
+              [150, "Breathe naturally. Let the ribs move without pressing the spine into a bigger arch."],
+              [190, "Roll carefully to one side to come off the support."]
+            ]
+          },
+          {
+            name: "Eagle arms",
+            image: assetPath("poses/eagle-arms.png"),
+            support: "Sit tall on a blanket. Hug opposite shoulders if wrapping the arms is too much.",
+            side: true,
+            cues: [
+              [0, "Sit comfortably and cross the right arm under the left for eagle arms, or hold opposite shoulders."],
+              [45, "Let the shoulder blades spread across the upper back while the ribs stay soft."],
+              [100, "Change the cross. Left arm comes under right, or take the opposite shoulder hug."],
+              [150, "Lower the chin slightly only if the neck welcomes it. Keep the face relaxed."],
+              [190, "Release the arms and roll the shoulders slowly."]
+            ]
+          }
+        ]
+      },
+      {
+        id: "lower-deep",
+        title: "15-Minute Lower Body Deep Release",
+        menuTitle: "Lower Body 2",
+        menuSubtitle: "Glutes and low back",
+        stretches: [
+          {
+            name: "Reclined figure four",
+            image: assetPath("poses/reclined-figure-four.png"),
+            support: "Hold behind the thigh or keep the foot grounded if that is kinder to the hip.",
+            side: true,
+            cues: [
+              [0, "Lie down and cross the right ankle over the left thigh. Draw the legs in only as far as your breath stays smooth."],
+              [45, "Let the sacrum be heavy. Keep the shoulders relaxed and soften your grip."],
+              [100, "Switch sides. Cross the left ankle and settle into the opposite outer hip."],
+              [150, "Stay patient. Let the stretch arrive rather than chasing it."],
+              [190, "Release both feet to the mat and prepare to sit up slowly."]
+            ]
+          },
+          {
+            name: "Shoelace fold",
+            image: assetPath("poses/shoelace-fold.png"),
+            support: "Sit on a blanket or keep one leg extended if crossing the thighs bothers the knees.",
+            side: true,
+            cues: [
+              [0, "Cross the right thigh over the left or choose an easier seat. Fold forward only as much as the knees allow."],
+              [45, "Let the spine round naturally and support the forehead if the floor is far away."],
+              [100, "Change the cross. Left thigh over right, or choose your alternative shape."],
+              [150, "Feel the outer hips without pulling yourself down."],
+              [190, "Use your hands to come up slowly."]
+            ]
+          },
+          {
+            name: "Child's pose side stretch",
+            image: assetPath("poses/childs-pose-side.png"),
+            support: "Rest your head on support if needed. Knees can be wide or closer together.",
+            side: true,
+            cues: [
+              [0, "Begin in child's pose and walk both hands to the right. Breathe into the left hip, waist, and side body."],
+              [45, "Let the hips stay heavy. Soften the space between the shoulder blades."],
+              [100, "Walk through center and over to the left. Breathe into the right hip and side ribs."],
+              [150, "Keep the stretch broad and quiet, like making more room for your breath."],
+              [190, "Walk back to center and slowly roll up."]
+            ]
+          },
+          {
+            name: "Seated twist",
+            image: assetPath("poses/seated-twist.png"),
+            support: "Sit tall on a folded blanket. Twist from the ribs and keep the breath easy.",
+            side: true,
+            cues: [
+              [0, "Sit comfortably and turn gently to the right. Let the hips stay grounded as the ribs rotate."],
+              [45, "Each inhale creates length. Each exhale softens the low back and shoulders."],
+              [100, "Unwind and turn to the left. Keep the twist gentle and spacious."],
+              [150, "Let the eyes, jaw, and belly soften."],
+              [190, "Return to center and prepare for closing rest."]
+            ]
+          }
+        ]
+      },
+      {
+        id: "lower-mobility",
+        title: "15-Minute Lower Body Mobility Yin",
+        menuTitle: "Lower Body 3",
+        menuSubtitle: "Quads, calves, and hips",
+        stretches: [
+          {
+            name: "Low lunge quad release",
+            image: assetPath("poses/dragon-lunge.png"),
+            support: "Pad the back knee and keep both hands supported. Stay higher if the front of the hip or quad feels too intense.",
+            side: true,
+            cues: [
+              [0, "Step the right foot forward into a low lunge. Slide the left knee back until you feel a gentle opening through the front of the left hip and thigh."],
+              [45, "Keep the front knee stacked over the ankle. Let the pelvis feel heavy while the chest stays easy."],
+              [100, "Slowly switch sides. Left foot forward, right knee down. Move with control and reset your supports."],
+              [150, "Breathe into the front of the right hip and thigh. Keep the low back long instead of forcing the hips down."],
+              [190, "Walk the hands in and prepare to release from the lunge."]
+            ]
+          },
+          {
+            name: "Reclined calf and hamstring hold",
+            image: assetPath("poses/reclined-hamstring.png"),
+            support: "Use a strap or towel behind the thigh or around the ball of the foot. Keep the knee softly bent.",
+            side: true,
+            cues: [
+              [0, "Lie on your back and lift the right leg. Flex and soften the foot a few times, then hold where the calf and hamstring can release."],
+              [45, "Let both hips stay grounded. If the back of the leg grips, bend the knee more."],
+              [100, "Switch legs. Lower the right leg and lift the left with the same patient setup."],
+              [150, "Breathe behind the knee, calf, and heel without pulling aggressively."],
+              [190, "Release the strap or hands and bring both feet back to the mat."]
+            ]
+          },
+          {
+            name: "Upright swan hip opener",
+            image: assetPath("poses/swan-pigeon.png"),
+            support: "Place a blanket under the front hip or stay seated higher on blocks. Keep the front knee comfortable.",
+            side: true,
+            cues: [
+              [0, "Bring the right shin forward for swan pose, but stay upright. Let the back leg lengthen and support the right hip."],
+              [45, "Instead of folding, lift through the chest and let the outer hip soften gradually."],
+              [100, "Switch sides with care. Left shin forward, right leg back, and set your support before settling."],
+              [150, "Keep the breath natural. Let the shape be steady and sustainable."],
+              [190, "Press into the hands and ease out of the pose slowly."]
+            ]
+          },
+          {
+            name: "Half butterfly side reach",
+            image: assetPath("poses/half-butterfly.png"),
+            support: "Sit on a folded blanket and bend the extended knee if the hamstring pulls too strongly.",
+            side: true,
+            cues: [
+              [0, "Extend the right leg and fold the left foot in. Reach gently toward the right leg or ankle and let the left side waist soften."],
+              [45, "Keep the stretch wide through the back of the leg and side body. Relax the neck."],
+              [100, "Switch sides. Extend the left leg, fold the right foot in, and reach without forcing."],
+              [150, "Let the breath move into the ribs and outer hip. Stay slow and grounded."],
+              [190, "Use your hands to come back upright and prepare for closing rest."]
+            ]
+          }
+        ]
+      },
+      {
+        id: "foam",
+        title: "15-Minute Foam Roller Yin",
+        menuTitle: "Foam Roller",
+        menuSubtitle: "Recovery and release",
+        stretches: [
+          {
+            name: "Calf roll",
+            image: assetPath("poses/foam-calf-roll.png"),
+            support: "Keep your hands behind you and control pressure with the grounded leg.",
+            side: true,
+            cues: [
+              [0, "Place the foam roller under the right calf. Move just an inch or two at a time and pause where the tissue feels dense."],
+              [45, "Point and flex the ankle slowly while keeping the pressure manageable."],
+              [100, "Switch legs. Place the roller under the left calf and keep the movement small."],
+              [150, "If the pressure is too strong, keep the opposite foot on the floor for more support."],
+              [190, "Lower both legs and move the roller aside for the next area."]
+            ]
+          },
+          {
+            name: "Quad roll",
+            image: assetPath("poses/foam-quad-roll.png"),
+            support: "Stay on the front thigh muscle. Avoid rolling directly over the kneecap or hip point.",
+            side: true,
+            cues: [
+              [0, "Place the roller under the right thigh and come to forearms. Glide slowly from upper thigh toward above the knee."],
+              [45, "Pause and breathe when you find a tender area. Keep the sensation broad and tolerable."],
+              [100, "Switch thighs. Bring the roller under the left quad and move slowly."],
+              [150, "Keep the belly gently engaged so the low back stays supported."],
+              [190, "Press back carefully and come down to one side."]
+            ]
+          },
+          {
+            name: "Glute roll",
+            image: assetPath("poses/foam-glute-roll.png"),
+            support: "Sit on the roller and cross one ankle over the opposite thigh for a figure-four shape.",
+            side: true,
+            cues: [
+              [0, "Sit on the roller and cross the right ankle over the left thigh. Lean slightly toward the right glute."],
+              [45, "Use your hands and grounded foot to keep the pressure steady and safe."],
+              [100, "Switch sides. Cross the left ankle and lean gently toward the left glute."],
+              [150, "Small circles can help. Stay away from sharp or nervy sensation."],
+              [190, "Uncross the legs and place the roller behind your upper back."]
+            ]
+          },
+          {
+            name: "Thoracic roll",
+            image: assetPath("poses/foam-thoracic-roll.png"),
+            support: "Keep the roller across the upper back and support your head with your hands.",
+            cues: [
+              [0, "Lie back with the roller under the shoulder blades. Support the head and keep the ribs soft."],
+              [45, "Roll from mid-back to upper back. Stay away from the low back and neck."],
+              [100, "Pause over one spot and gently extend over the roller as you exhale."],
+              [150, "Move slowly. Let the upper back open without forcing a big arch."],
+              [190, "Roll to one side and come up slowly."]
+            ]
+          }
+        ]
+      },
+      {
+        id: "full",
+        title: "15-Minute Full Body Yin",
+        menuTitle: "Full Body",
+        menuSubtitle: "Hips, spine, and rest",
+        stretches: [
+          {
+            name: "Child's pose side stretch",
+            image: assetPath("poses/childs-pose-side.png"),
+            support: "Rest your head on support if needed. Knees can be wide or closer together.",
+            side: true,
+            cues: [
+              [0, "Begin in child's pose and walk both hands to the right. Breathe into the left side body."],
+              [45, "Let the hips stay heavy. Soften the space between the shoulder blades."],
+              [100, "Walk through center and over to the left. Breathe into the right side ribs."],
+              [150, "Keep the stretch broad and quiet, like making more room for your breath."],
+              [190, "Walk back to center and slowly roll up."]
+            ]
+          },
+          {
+            name: "Shoelace fold",
+            image: assetPath("poses/shoelace-fold.png"),
+            support: "Sit on a blanket or keep one leg extended if crossing the thighs bothers the knees.",
+            side: true,
+            cues: [
+              [0, "Cross the right thigh over the left or choose an easier seat. Fold forward only as much as the knees allow."],
+              [45, "Let the spine round naturally and support the forehead if the floor is far away."],
+              [100, "Change the cross. Left thigh over right, or choose your alternative shape."],
+              [150, "Feel the outer hips without pulling yourself down."],
+              [190, "Use your hands to come up slowly."]
+            ]
+          },
+          {
+            name: "Seated twist",
+            image: assetPath("poses/seated-twist.png"),
+            support: "Sit tall on a folded blanket. Twist from the ribs and keep the breath easy.",
+            side: true,
+            cues: [
+              [0, "Sit comfortably and turn gently to the right. Let your hands land wherever they help you stay tall."],
+              [45, "Each inhale creates length. Each exhale softens the shoulders."],
+              [100, "Unwind and turn to the left. Keep the twist gentle and spacious."],
+              [150, "Let the eyes, jaw, and belly soften."],
+              [190, "Return to center and pause before lying down."]
+            ]
+          },
+          {
+            name: "Reclined figure four",
+            image: assetPath("poses/reclined-figure-four.png"),
+            support: "Hold behind the thigh or keep the foot grounded if that is kinder to the hip.",
+            side: true,
+            cues: [
+              [0, "Lie down and cross the right ankle over the left thigh. Draw the legs in only as far as the breath stays smooth."],
+              [45, "Let the sacrum be heavy. Soften your grip and the muscles around your face."],
+              [100, "Switch sides. Cross the left ankle and settle into the opposite hip."],
+              [150, "Stay patient. Let the stretch arrive rather than chasing it."],
+              [190, "Release both feet and rest flat on your back."]
+            ]
+          }
+        ]
+      }
+    ];
+
+    const classMenu = document.getElementById("classMenu");
+    const playButton = document.getElementById("playButton");
+    const restartButton = document.getElementById("restartButton");
+    const skipButton = document.getElementById("skipButton");
+    const muteButton = document.getElementById("muteButton");
+    const scrub = document.getElementById("scrub");
+    const barFill = document.getElementById("barFill");
+    const elapsedEl = document.getElementById("elapsed");
+    const remainingEl = document.getElementById("remaining");
+    const classTitle = document.getElementById("classTitle");
+    const poseName = document.getElementById("poseName");
+    const cueText = document.getElementById("cueText");
+    const supportText = document.getElementById("supportText");
+    const nextUp = document.getElementById("nextUp");
+    const sceneBadge = document.getElementById("sceneBadge");
+    const poseArt = document.getElementById("poseArt");
+    const voiceState = document.getElementById("voiceState");
+    const cueCard = document.getElementById("cueCard");
+    const detailsToggle = document.getElementById("detailsToggle");
+    const cueDetails = document.getElementById("cueDetails");
+    const compactCueQuery = window.matchMedia("(max-width: 860px)");
+
+    let activeClass = classes[0];
+    let timeline = makeTimeline(activeClass);
+    let startedAt = 0;
+    let elapsed = 0;
+    let raf = 0;
+    let playing = false;
+    let muted = false;
+    let lastCueId = "";
+    let lastImage = "";
+    let lastMirror = false;
+    let cueDetailsOpen = !compactCueQuery.matches;
+
+    function setCueDetails(open) {
+      cueDetailsOpen = open;
+      cueCard.classList.toggle("is-collapsed", !cueDetailsOpen);
+      detailsToggle.textContent = cueDetailsOpen ? "Hide details" : "Show details";
+      detailsToggle.setAttribute("aria-expanded", cueDetailsOpen ? "true" : "false");
+      cueDetails.hidden = !cueDetailsOpen;
+    }
+
+    function formatTime(seconds) {
+      const value = Math.max(0, Math.round(seconds));
+      const minutes = Math.floor(value / 60);
+      const secs = String(value % 60).padStart(2, "0");
+      return `${minutes}:${secs}`;
+    }
+
+    function makeTimeline(yogaClass) {
+      const events = [];
+      let cursor = 0;
+
+      yogaClass.stretches.forEach((stretch, index) => {
+        stretch.cues.forEach(([offset, cue], cueIndex) => {
+          const switchedSide = stretch.side && offset >= 100;
+          events.push({
+            time: cursor + offset,
+            type: "stretch",
+            pose: stretch.name,
+            image: stretch.image,
+            mirrored: switchedSide,
+            label: cueIndex === 0 ? `Stretch ${index + 1}` : switchedSide && offset === 100 ? "Switch sides" : "Hold",
+            support: stretch.support,
+            cue,
+            next: yogaClass.stretches[index + 1]?.name || "Closing rest"
+          });
+        });
+
+        cursor += STRETCH;
+        if (index < yogaClass.stretches.length - 1) {
+          events.push({
+            time: cursor,
+            type: "transition",
+            pose: "Transition",
+            image: assetPath("instructor-avatar-reference.png"),
+            mirrored: false,
+            label: "Transition",
+            support: "Move slowly. Give yourself one breath before entering the next shape.",
+            cue: `Release ${stretch.name.toLowerCase()}. In ten seconds we move to ${yogaClass.stretches[index + 1].name}.`,
+            next: yogaClass.stretches[index + 1].name
+          });
+          cursor += TRANSITION;
+        }
+      });
+
+      events.push({
+        time: TOTAL - CLOSING,
+        type: "closing",
+        pose: "Closing rest",
+        image: assetPath("instructor-avatar-reference.png"),
+        mirrored: false,
+        label: "Rest",
+        support: "Let the work land. Stay as long as you like after the timer ends.",
+        cue: "Release the final shape. Rest on your back or seated. Notice the lower breath, the weight of the body, and the quiet after practice.",
+        next: "Class complete"
+      });
+      events.push({
+        time: TOTAL - 12,
+        type: "closing",
+        pose: "Class complete",
+        image: assetPath("instructor-avatar-reference.png"),
+        mirrored: false,
+        label: "Complete",
+        support: "Thank yourself for taking these fifteen minutes.",
+        cue: "Your class is complete. Move slowly as you return to your day.",
+        next: "Restart class"
+      });
+
+      return events.sort((a, b) => a.time - b.time);
+    }
+
+    function currentEvent() {
+      let event = timeline[0];
+      for (const item of timeline) {
+        if (item.time <= elapsed) event = item;
+      }
+      return event;
+    }
+
+    function nextStretchTime() {
+      for (const item of timeline) {
+        if (item.time > elapsed && (item.label.startsWith("Stretch") || item.type === "closing")) return item.time;
+      }
+      return TOTAL;
+    }
+
+    function renderImage(event) {
+      if (event.image === lastImage && event.mirrored === lastMirror) return;
+      lastImage = event.image;
+      lastMirror = event.mirrored;
+      const mirrorClass = event.mirrored ? " mirrored" : "";
+      const fileName = event.image.split("/").pop();
+      const fallback = fileName === "instructor-avatar-reference.png"
+        ? "./yin-yoga-videos/assets/instructor-avatar-reference.png"
+        : `./yin-yoga-videos/assets/poses/${fileName}`;
+      const image = document.createElement("img");
+      image.className = mirrorClass.trim();
+      image.alt = `${event.pose} demonstrated by a human-like yoga instructor avatar on a mat in a calm studio`;
+      image.addEventListener("error", () => {
+        const fallbackSrc = image.getAttribute("data-fallback-src");
+        if (!fallbackSrc) return;
+        image.removeAttribute("data-fallback-src");
+        image.src = fallbackSrc;
+      });
+      image.setAttribute("data-fallback-src", fallback);
+      image.src = event.image;
+      poseArt.replaceChildren(image);
+      poseArt.animate(
+        [{ opacity: 0.86 }, { opacity: 1 }],
+        { duration: 650, easing: "cubic-bezier(.22,.61,.36,1)" }
+      );
+    }
+
+    function speak(text, id) {
+      if (muted || !playing || !("speechSynthesis" in window) || id === lastCueId) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 0.84;
+      utterance.pitch = 0.92;
+      utterance.volume = 0.9;
+      const voices = window.speechSynthesis.getVoices();
+      const preferred = voices.find((voice) => /Samantha|Karen|Moira|Tessa|Ava|Allison|Serena/i.test(voice.name));
+      if (preferred) utterance.voice = preferred;
+      utterance.onstart = () => { voiceState.textContent = "Voice-over playing"; };
+      utterance.onend = () => { voiceState.textContent = muted ? "Voice-over muted" : "Voice-over ready"; };
+      window.speechSynthesis.speak(utterance);
+      lastCueId = id;
+    }
+
+    function spokenCue(event) {
+      const lead =
+        event.type === "transition"
+          ? `Transition. ${event.cue}`
+          : event.label === "Switch sides"
+            ? `Switch sides. ${event.pose}. ${event.cue}`
+            : event.label.startsWith("Stretch")
+              ? `${event.label}. ${event.pose}. ${event.cue}`
+              : `${event.pose}. ${event.cue}`;
+      const description = event.support ? `Description. ${event.support}` : "";
+      const next = event.type === "transition" ? `Next stretch: ${event.next}.` : "";
+      return [lead, description, next].filter(Boolean).join(" ");
+    }
+
+    function updateScene(shouldSpeak = false) {
+      const event = currentEvent();
+      renderImage(event);
+      classTitle.textContent = activeClass.title;
+      poseName.textContent = event.pose;
+      cueText.textContent = event.cue;
+      supportText.textContent = event.support;
+      nextUp.textContent = event.next;
+      sceneBadge.textContent = event.label;
+      elapsedEl.textContent = formatTime(elapsed);
+      remainingEl.textContent = formatTime(TOTAL - elapsed);
+      scrub.value = Math.round(elapsed);
+      barFill.style.width = `${Math.min(100, (elapsed / TOTAL) * 100)}%`;
+      if (shouldSpeak) speak(spokenCue(event), `${activeClass.id}-${event.time}`);
+    }
+
+    function tick(now) {
+      if (!playing) return;
+      elapsed = Math.min(TOTAL, (now - startedAt) / 1000);
+      const previousCue = lastCueId;
+      updateScene(true);
+
+      if (elapsed >= TOTAL) {
+        playing = false;
+        playButton.textContent = "Play";
+        window.speechSynthesis?.cancel();
+        voiceState.textContent = "Class complete";
+        return;
+      }
+
+      raf = requestAnimationFrame(tick);
+      if (previousCue !== lastCueId) {
+        document.querySelector(".cue-card").animate(
+          [{ opacity: 0.78, transform: "translateY(10px)" }, { opacity: 1, transform: "translateY(0)" }],
+          { duration: 420, easing: "cubic-bezier(.22,.61,.36,1)" }
+        );
+      }
+    }
+
+    function play() {
+      if (playing) {
+        playing = false;
+        playButton.textContent = "Play";
+        window.speechSynthesis?.pause();
+        voiceState.textContent = "Paused";
+        cancelAnimationFrame(raf);
+        return;
+      }
+
+      playing = true;
+      playButton.textContent = "Pause";
+      startedAt = performance.now() - elapsed * 1000;
+      window.speechSynthesis?.resume();
+      updateScene(true);
+      raf = requestAnimationFrame(tick);
+    }
+
+    function restart() {
+      elapsed = 0;
+      lastCueId = "";
+      lastImage = "";
+      lastMirror = false;
+      startedAt = performance.now();
+      window.speechSynthesis?.cancel();
+      voiceState.textContent = "Voice reads cue and description";
+      updateScene(playing);
+    }
+
+    function selectClass(yogaClass) {
+      activeClass = yogaClass;
+      timeline = makeTimeline(activeClass);
+      playing = false;
+      elapsed = 0;
+      lastCueId = "";
+      lastImage = "";
+      lastMirror = false;
+      playButton.textContent = "Play";
+      startedAt = performance.now();
+      window.speechSynthesis?.cancel();
+      voiceState.textContent = "Voice reads cue and description";
+      renderClassMenu();
+      updateScene(false);
+    }
+
+    function renderClassMenu() {
+      classMenu.innerHTML = "";
+      classes.forEach((yogaClass) => {
+        const button = document.createElement("button");
+        button.className = "class-option";
+        button.type = "button";
+        button.setAttribute("aria-pressed", yogaClass.id === activeClass.id ? "true" : "false");
+        button.innerHTML = `<strong>${yogaClass.menuTitle}</strong><span>${yogaClass.menuSubtitle}</span>`;
+        button.addEventListener("click", () => selectClass(yogaClass));
+        classMenu.appendChild(button);
+      });
+    }
+
+    playButton.addEventListener("click", play);
+    restartButton.addEventListener("click", restart);
+    skipButton.addEventListener("click", () => {
+      elapsed = Math.min(nextStretchTime(), TOTAL);
+      lastCueId = "";
+      startedAt = performance.now() - elapsed * 1000;
+      window.speechSynthesis?.cancel();
+      updateScene(playing);
+    });
+    muteButton.addEventListener("click", () => {
+      muted = !muted;
+      muteButton.textContent = muted ? "Voice off" : "Voice on";
+      muteButton.setAttribute("aria-pressed", muted ? "true" : "false");
+      voiceState.textContent = muted ? "Voice-over muted" : "Voice-over ready";
+      if (muted) window.speechSynthesis?.cancel();
+    });
+    detailsToggle.addEventListener("click", () => {
+      setCueDetails(!cueDetailsOpen);
+    });
+    compactCueQuery.addEventListener?.("change", (event) => {
+      setCueDetails(!event.matches);
+    });
+    scrub.addEventListener("input", () => {
+      elapsed = Number(scrub.value);
+      lastCueId = "";
+      startedAt = performance.now() - elapsed * 1000;
+      window.speechSynthesis?.cancel();
+      updateScene(false);
+      voiceState.textContent = "Press Play to hear this cue";
+    });
+    window.speechSynthesis?.addEventListener?.("voiceschanged", () => {});
+
+    renderClassMenu();
+    setCueDetails(cueDetailsOpen);
+    updateScene(false);
+  </script>
+</body>
+</html>
+    }
+
+    .page {
+      width: min(1240px, 100%);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: clamp(14px, 3vw, 30px);
+      display: grid;
+      align-items: center;
+    }
+
+    .class-player {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--studio);
+      box-shadow: var(--shadow);
+    }
+
+    .video-frame {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      min-height: 430px;
+      overflow: hidden;
+      background: #efe7db;
+    }
+
+    .pose-art,
+    .pose-art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .pose-art img {
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      background: #efe7db;
+      transform-origin: center bottom;
+      animation: instructorBreath 7.5s ease-in-out infinite;
+    }
+
+    .pose-art img.mirrored {
+      transform: scaleX(-1);
+      animation-name: instructorBreathMirror;
+    }
+
+    @keyframes instructorBreath {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-2px) scale(1.003); }
+    }
+
+    @keyframes instructorBreathMirror {
+      0%, 100% { transform: scaleX(-1) translateY(0) scale(1); }
+      50% { transform: scaleX(-1) translateY(-2px) scale(1.003); }
+    }
+
+    .soft-vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(20, 27, 22, 0.36), transparent 26%, transparent 68%, rgba(20, 27, 22, 0.46)),
+        linear-gradient(90deg, rgba(20, 27, 22, 0.18), transparent 26%, transparent 72%, rgba(20, 27, 22, 0.12));
+    }
+
+    .video-top {
+      position: absolute;
+      left: clamp(14px, 2.4vw, 28px);
+      right: clamp(14px, 2.4vw, 28px);
+      top: clamp(14px, 2.4vw, 28px);
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: start;
+      color: #fffdf8;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.36);
+    }
+
+    .title-kicker,
+    .clock span,
+    .scene-badge,
+    .voice-state {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin-top: 6px;
+      font-size: clamp(30px, 5vw, 58px);
+      line-height: 0.98;
+    }
+
+    .clock {
+      min-width: 112px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 8px;
+      background: rgba(23, 31, 25, 0.38);
+      backdrop-filter: blur(10px);
+      text-align: right;
+    }
+
+    .clock strong {
+      display: block;
+      font-size: clamp(22px, 3vw, 34px);
+      line-height: 1;
+    }
+
+    .clock span {
+      display: block;
+      margin-top: 4px;
+      opacity: 0.86;
+    }
+
+    .cue-card {
+      position: absolute;
+      right: clamp(14px, 2.4vw, 28px);
+      bottom: clamp(80px, 9vw, 118px);
+      width: min(440px, calc(100% - 28px));
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 8px;
+      padding: clamp(14px, 2.1vw, 22px);
+      color: #fffdf8;
+      background: rgba(28, 36, 30, 0.64);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 18px 40px rgba(16, 24, 18, 0.28);
+    }
+
     .scene-badge {
       display: inline-flex;
       min-height: 28px;
