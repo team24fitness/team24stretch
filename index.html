@@ -479,8 +479,7 @@
     const STRETCH = 200;
     const TRANSITION = 10;
     const CLOSING = 40;
-    const IS_IN_PROJECT_FOLDER = window.location.pathname.includes("/yin-yoga-videos/");
-    const ASSET_ROOT = IS_IN_PROJECT_FOLDER ? "./assets" : "./yin-yoga-videos/assets";
+    const ASSET_ROOT = "./assets";
     const assetPath = (path) => `${ASSET_ROOT}/${path}`;
 
     const classes = [
@@ -842,17 +841,19 @@
       lastImage = event.image;
       lastMirror = event.mirrored;
       const mirrorClass = event.mirrored ? " mirrored" : "";
-      const fallback = event.image.startsWith("./yin-yoga-videos/assets/")
-        ? event.image.replace("./yin-yoga-videos/assets/", "./assets/")
-        : event.image.replace("./assets/", "./yin-yoga-videos/assets/");
-      poseArt.innerHTML = `<img class="${mirrorClass.trim()}" src="${event.image}" data-fallback-src="${fallback}" alt="${event.pose} demonstrated by a human-like yoga instructor avatar on a mat in a calm studio">`;
-      const image = poseArt.querySelector("img");
+      const fallback = event.image.replace("./assets/", "./yin-yoga-videos/assets/");
+      const image = document.createElement("img");
+      image.className = mirrorClass.trim();
+      image.alt = `${event.pose} demonstrated by a human-like yoga instructor avatar on a mat in a calm studio`;
       image.addEventListener("error", () => {
         const fallbackSrc = image.getAttribute("data-fallback-src");
         if (!fallbackSrc) return;
         image.removeAttribute("data-fallback-src");
         image.src = fallbackSrc;
       });
+      image.setAttribute("data-fallback-src", fallback);
+      image.src = event.image;
+      poseArt.replaceChildren(image);
       poseArt.animate(
         [{ opacity: 0.86 }, { opacity: 1 }],
         { duration: 650, easing: "cubic-bezier(.22,.61,.36,1)" }
