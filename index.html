@@ -479,6 +479,9 @@
     const STRETCH = 200;
     const TRANSITION = 10;
     const CLOSING = 40;
+    const IS_IN_PROJECT_FOLDER = window.location.pathname.includes("/yin-yoga-videos/");
+    const ASSET_ROOT = IS_IN_PROJECT_FOLDER ? "./assets" : "./yin-yoga-videos/assets";
+    const assetPath = (path) => `${ASSET_ROOT}/${path}`;
 
     const classes = [
       {
@@ -489,7 +492,7 @@
         stretches: [
           {
             name: "Dragon lunge",
-            image: "./assets/poses/dragon-lunge.png",
+            image: assetPath("poses/dragon-lunge.png"),
             support: "Pad the back knee. Hands can come to blocks, the floor, or your front thigh.",
             side: true,
             cues: [
@@ -502,7 +505,7 @@
           },
           {
             name: "Half butterfly fold",
-            image: "./assets/poses/half-butterfly.png",
+            image: assetPath("poses/half-butterfly.png"),
             support: "Sit on a folded blanket if your low back rounds too strongly. Bend the long leg as much as needed.",
             side: true,
             cues: [
@@ -515,7 +518,7 @@
           },
           {
             name: "Swan pose",
-            image: "./assets/poses/swan-pigeon.png",
+            image: assetPath("poses/swan-pigeon.png"),
             support: "Support the front hip with a blanket. Keep the front knee comfortable and stay upright if folding is too much.",
             side: true,
             cues: [
@@ -528,7 +531,7 @@
           },
           {
             name: "Reclined hamstring stretch",
-            image: "./assets/poses/reclined-hamstring.png",
+            image: assetPath("poses/reclined-hamstring.png"),
             support: "Use a strap, towel, or hands behind the thigh. Keep both sides of the pelvis heavy.",
             side: true,
             cues: [
@@ -549,7 +552,7 @@
         stretches: [
           {
             name: "Melting heart",
-            image: "./assets/poses/melting-heart.png",
+            image: assetPath("poses/melting-heart.png"),
             support: "Keep hips over knees. Rest the forehead on a blanket if the shoulders need more space.",
             cues: [
               [0, "Come to hands and knees and walk your hands forward into melting heart. Keep the hips stacked over the knees."],
@@ -561,7 +564,7 @@
           },
           {
             name: "Thread the needle",
-            image: "./assets/poses/thread-the-needle.png",
+            image: assetPath("poses/thread-the-needle.png"),
             support: "Use a blanket under the head or shoulder if the floor feels far away.",
             side: true,
             cues: [
@@ -574,7 +577,7 @@
           },
           {
             name: "Supported fish",
-            image: "./assets/poses/supported-fish.png",
+            image: assetPath("poses/supported-fish.png"),
             support: "Place a bolster or rolled blanket under the shoulder blades, not under the low back.",
             cues: [
               [0, "Lower onto your support for supported fish. Let the chest broaden and the arms rest open."],
@@ -586,7 +589,7 @@
           },
           {
             name: "Eagle arms",
-            image: "./assets/poses/eagle-arms.png",
+            image: assetPath("poses/eagle-arms.png"),
             support: "Sit tall on a blanket. Hug opposite shoulders if wrapping the arms is too much.",
             side: true,
             cues: [
@@ -607,7 +610,7 @@
         stretches: [
           {
             name: "Calf roll",
-            image: "./assets/poses/foam-calf-roll.png",
+            image: assetPath("poses/foam-calf-roll.png"),
             support: "Keep your hands behind you and control pressure with the grounded leg.",
             side: true,
             cues: [
@@ -620,7 +623,7 @@
           },
           {
             name: "Quad roll",
-            image: "./assets/poses/foam-quad-roll.png",
+            image: assetPath("poses/foam-quad-roll.png"),
             support: "Stay on the front thigh muscle. Avoid rolling directly over the kneecap or hip point.",
             side: true,
             cues: [
@@ -633,7 +636,7 @@
           },
           {
             name: "Glute roll",
-            image: "./assets/poses/foam-glute-roll.png",
+            image: assetPath("poses/foam-glute-roll.png"),
             support: "Sit on the roller and cross one ankle over the opposite thigh for a figure-four shape.",
             side: true,
             cues: [
@@ -646,7 +649,7 @@
           },
           {
             name: "Thoracic roll",
-            image: "./assets/poses/foam-thoracic-roll.png",
+            image: assetPath("poses/foam-thoracic-roll.png"),
             support: "Keep the roller across the upper back and support your head with your hands.",
             cues: [
               [0, "Lie back with the roller under the shoulder blades. Support the head and keep the ribs soft."],
@@ -666,7 +669,7 @@
         stretches: [
           {
             name: "Child's pose side stretch",
-            image: "./assets/poses/childs-pose-side.png",
+            image: assetPath("poses/childs-pose-side.png"),
             support: "Rest your head on support if needed. Knees can be wide or closer together.",
             side: true,
             cues: [
@@ -679,7 +682,7 @@
           },
           {
             name: "Shoelace fold",
-            image: "./assets/poses/shoelace-fold.png",
+            image: assetPath("poses/shoelace-fold.png"),
             support: "Sit on a blanket or keep one leg extended if crossing the thighs bothers the knees.",
             side: true,
             cues: [
@@ -692,7 +695,7 @@
           },
           {
             name: "Seated twist",
-            image: "./assets/poses/seated-twist.png",
+            image: assetPath("poses/seated-twist.png"),
             support: "Sit tall on a folded blanket. Twist from the ribs and keep the breath easy.",
             side: true,
             cues: [
@@ -705,7 +708,7 @@
           },
           {
             name: "Reclined figure four",
-            image: "./assets/poses/reclined-figure-four.png",
+            image: assetPath("poses/reclined-figure-four.png"),
             support: "Hold behind the thigh or keep the foot grounded if that is kinder to the hip.",
             side: true,
             cues: [
@@ -782,7 +785,7 @@
             time: cursor,
             type: "transition",
             pose: "Transition",
-            image: "./assets/instructor-avatar-reference.png",
+            image: assetPath("instructor-avatar-reference.png"),
             mirrored: false,
             label: "Transition",
             support: "Move slowly. Give yourself one breath before entering the next shape.",
@@ -797,7 +800,7 @@
         time: TOTAL - CLOSING,
         type: "closing",
         pose: "Closing rest",
-        image: "./assets/instructor-avatar-reference.png",
+        image: assetPath("instructor-avatar-reference.png"),
         mirrored: false,
         label: "Rest",
         support: "Let the work land. Stay as long as you like after the timer ends.",
@@ -808,7 +811,7 @@
         time: TOTAL - 12,
         type: "closing",
         pose: "Class complete",
-        image: "./assets/instructor-avatar-reference.png",
+        image: assetPath("instructor-avatar-reference.png"),
         mirrored: false,
         label: "Complete",
         support: "Thank yourself for taking these fifteen minutes.",
@@ -839,9 +842,9 @@
       lastImage = event.image;
       lastMirror = event.mirrored;
       const mirrorClass = event.mirrored ? " mirrored" : "";
-      const fallback = event.image.startsWith("./assets/")
-        ? `./yin-yoga-videos/${event.image.slice(2)}`
-        : "";
+      const fallback = event.image.startsWith("./yin-yoga-videos/assets/")
+        ? event.image.replace("./yin-yoga-videos/assets/", "./assets/")
+        : event.image.replace("./assets/", "./yin-yoga-videos/assets/");
       poseArt.innerHTML = `<img class="${mirrorClass.trim()}" src="${event.image}" data-fallback-src="${fallback}" alt="${event.pose} demonstrated by a human-like yoga instructor avatar on a mat in a calm studio">`;
       const image = poseArt.querySelector("img");
       image.addEventListener("error", () => {

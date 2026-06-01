@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/yin-yoga-videos/index.html"
+    }
+  ]
+}
