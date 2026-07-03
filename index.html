@@ -525,359 +525,146 @@
     const classes = [
       {
         id: "lower",
-        title: "15-Minute Lower Body Yin",
-        menuTitle: "Lower Body",
-        menuSubtitle: "Hips and hamstrings",
+        title: "15-Minute Lower Body Yin: Hips and Glutes",
+        menuTitle: "Lower Body 1",
+        menuSubtitle: "Bridge, lunge, lizard, pigeon",
+        total: 900,
+        tightTiming: true,
+        manualClosing: true,
         stretches: [
           {
-            name: "Dragon lunge",
+            name: "Bridge pose",
+            duration: 120,
+            image: assetPath("poses/bridge-pose.png"),
+            support: "Place a block under the sacrum, not the low back. Keep the neck neutral and the feet grounded.",
+            cues: [
+              [0, "Lie on your back, bend the knees, and place the feet hip-width apart. Lift the hips just enough to slide a block under the sacrum for supported bridge."],
+              [30, "Let the arms rest by your sides. Soften the throat, ribs, and belly while the front of the hips opens."],
+              [75, "Keep the knees pointing forward and the breath natural. This should feel supported, not like a workout hold."],
+              [112, "Press into the feet, lift the hips slightly, move the block away, and slowly lower down for low lunge."]
+            ]
+          },
+          {
+            name: "Low lunge",
+            duration: 240,
             image: assetPath("poses/dragon-lunge.png"),
-            support: "Pad the back knee. Hands can come to blocks, the floor, or your front thigh.",
+            support: "Pad the back knee and use blocks under the hands. Keep the front knee stacked over the ankle.",
             side: true,
             cues: [
-              [0, "Step your right foot forward and slide the left knee back. Keep the front knee stacked safely and support both hands on blocks."],
-              [45, "Soften your jaw and breathe toward the front of the left hip. Let the hips settle without forcing the low back."],
-              [100, "Slowly switch sides. Left foot forward, right knee back. Take your time and keep the movement controlled."],
-              [145, "Let the shoulders relax away from your ears. Stay with a slow, even exhale."],
-              [190, "Gently walk the hands in and prepare to release from dragon lunge."]
+              [0, "Step the right foot forward and lower the left knee. Settle into a low lunge with both hands supported."],
+              [45, "Let the pelvis get heavy without forcing the low back. Breathe into the front of the left hip."],
+              [115, "Prepare to switch sides. Move slowly and keep the breath steady."],
+              [120, "Switch sides. Step the left foot forward and lower the right knee with padding under the knee."],
+              [165, "Stay high enough that the stretch feels broad through the right hip flexor and thigh."],
+              [230, "Walk the hands in and transition carefully to lizard pose."]
             ]
           },
           {
-            name: "Half butterfly fold",
-            image: assetPath("poses/half-butterfly.png"),
-            support: "Sit on a folded blanket if your low back rounds too strongly. Bend the long leg as much as needed.",
+            name: "Lizard pose",
+            duration: 240,
+            image: assetPath("poses/lizard-pose.png"),
+            support: "Use blocks under the forearms or hands. Keep the front foot grounded and the back knee padded.",
             side: true,
             cues: [
-              [0, "Extend the right leg and bring the left sole toward the inner thigh. Fold forward only as far as your breath can stay easy."],
-              [45, "If the hamstring feels intense, bend the extended knee or come a little higher."],
-              [100, "Roll up slowly and change sides. Let the left leg extend and fold again with a relaxed neck."],
-              [150, "Notice the back of the leg, the outer hip, and the breath moving across the ribs."],
-              [190, "Use your hands to come up, one vertebra at a time."]
+              [0, "Bring the right foot outside the hands for lizard. Stay on hands or lower forearms to blocks."],
+              [45, "Let the hips soften while the spine stays long. Keep sensation deep but never sharp in the hip or knee."],
+              [115, "Prepare to switch. Press into your supports and move with control."],
+              [120, "Switch sides. Bring the left foot outside the hands and settle onto hands or blocks."],
+              [165, "Relax the jaw and shoulders. Let each exhale create a little more space around the inner hip."],
+              [230, "Walk the hands back in and move slowly toward pigeon pose."]
             ]
           },
           {
-            name: "Swan pose",
+            name: "Pigeon pose",
+            duration: 240,
             image: assetPath("poses/swan-pigeon.png"),
-            support: "Support the front hip with a blanket. Keep the front knee comfortable and stay upright if folding is too much.",
+            support: "Support the front hip with a blanket or block. Keep the front knee comfortable and avoid forcing the shin parallel.",
             side: true,
             cues: [
-              [0, "Bring the right shin forward for swan pose. Slide the left leg back and support the right hip as much as you need."],
-              [45, "Come down to forearms or stay upright. The goal is a sustainable outer-hip stretch, not maximum depth."],
-              [100, "Switch sides with care. Bring the left shin forward, right leg back, and settle in slowly."],
-              [150, "Let the belly and throat soften. Nothing needs to be pushed."],
-              [190, "Press the hands down and slowly back out of the shape."]
+              [0, "Bring the right shin forward for pigeon. Slide the left leg back and support the right hip as much as needed."],
+              [45, "Stay upright or fold forward. The goal is a sustainable outer-hip stretch, not maximum depth."],
+              [115, "Prepare to switch sides. Use your hands and move slowly."],
+              [120, "Switch sides. Bring the left shin forward, right leg back, and set your support before settling."],
+              [165, "Let the belly and throat soften. Keep the front knee free from pressure or pinching."],
+              [230, "Press the hands down and ease out of pigeon for child's pose."]
             ]
           },
           {
-            name: "Reclined hamstring stretch",
-            image: assetPath("poses/reclined-hamstring.png"),
-            support: "Use a strap, towel, or hands behind the thigh. Keep both sides of the pelvis heavy.",
-            side: true,
+            name: "Child's pose",
+            duration: 60,
+            image: assetPath("poses/childs-pose-side.png"),
+            support: "Knees can be wide or closer together. Rest the head on a block, blanket, or the mat.",
             cues: [
-              [0, "Lie on your back and lift the right leg. Hold behind the thigh or loop a strap around the foot."],
-              [45, "Let the shoulders rest. A small bend in the knee is completely welcome."],
-              [100, "Switch legs. Lower the right leg and lift the left, keeping the breath smooth."],
-              [150, "Feel length without gripping. Let the face and hands stay soft."],
-              [190, "Release both feet to the mat and prepare for stillness."]
-            ]
-          }
-        ]
-      },
-      {
-        id: "upper",
-        title: "15-Minute Upper Body Yin",
-        menuTitle: "Upper Body",
-        menuSubtitle: "Shoulders and chest",
-        stretches: [
-          {
-            name: "Melting heart",
-            image: assetPath("poses/melting-heart.png"),
-            support: "Keep hips over knees. Rest the forehead on a blanket if the shoulders need more space.",
-            cues: [
-              [0, "Come to hands and knees and walk your hands forward into melting heart. Keep the hips stacked over the knees."],
-              [45, "Let the chest soften toward the mat while the breath widens across the side ribs."],
-              [100, "Stay with this shape or move the hands slightly wider if that gives the shoulders more room."],
-              [150, "Keep the low back quiet. Let the front of the chest open slowly without forcing it."],
-              [190, "Walk the hands back in and sit toward your heels with control."]
-            ]
-          },
-          {
-            name: "Thread the needle",
-            image: assetPath("poses/thread-the-needle.png"),
-            support: "Use a blanket under the head or shoulder if the floor feels far away.",
-            side: true,
-            cues: [
-              [0, "From hands and knees, thread the right arm underneath you. Rest the right shoulder and side of the head."],
-              [45, "Let the upper back rotate gently. The left hand can stay grounded or reach forward."],
-              [100, "Switch sides slowly. Thread the left arm through and settle with an easy neck."],
-              [150, "Breathe across the back of the shoulder blades and soften the jaw."],
-              [190, "Press into the grounded hand and unwind carefully."]
-            ]
-          },
-          {
-            name: "Supported fish",
-            image: assetPath("poses/supported-fish.png"),
-            support: "Place a bolster or rolled blanket under the shoulder blades, not under the low back.",
-            cues: [
-              [0, "Lower onto your support for supported fish. Let the chest broaden and the arms rest open."],
-              [45, "If the neck feels strained, place a folded blanket under the head or reduce the height."],
-              [100, "Stay still and let the collarbones widen from the center out."],
-              [150, "Breathe naturally. Let the ribs move without pressing the spine into a bigger arch."],
-              [190, "Roll carefully to one side to come off the support."]
-            ]
-          },
-          {
-            name: "Criss cross shoulder yin stretch",
-            image: assetPath("poses/criss-cross-shoulder.png"),
-            support: "Lie on your stomach with the arms crossed under the upper chest. Let the head rest heavy and keep the sensation broad, not sharp.",
-            side: true,
-            cues: [
-              [0, "Lie on your stomach and open the arms into a T. Slide the right arm underneath the left across the upper chest, then walk both hands away from the body."],
-              [45, "Let the forehead or cheek rest heavy. Soften the jaw and breathe into the back of the right shoulder, upper back, and space between the shoulder blades."],
-              [100, "Switch the cross slowly. Unthread the arms, then slide the left arm underneath the right and walk both hands out again."],
-              [150, "Let the weight of the chest settle gently over the crossed arms. If you feel pinching, numbness, or sharp sensation, ease out or reduce the pressure."],
-              [190, "Uncross the arms with care, bring the hands beside the ribs, and roll the shoulders slowly before closing the upper body class."]
+              [0, "Bring the big toes together and send the hips back for child's pose. Let the forehead rest and soften the shoulders."],
+              [30, "Feel the breath move into the back body. Let the hips, thighs, and low back settle."],
+              [52, "Your lower body yin class is complete. Move slowly as you lift your head and return to your day."]
             ]
           }
         ]
       },
       {
         id: "lower-deep",
-        title: "15-Minute Lower Body Deep Release",
+        title: "15-Minute Lower Body Yin: Glutes and Low Back",
         menuTitle: "Lower Body 2",
-        menuSubtitle: "Glutes and low back",
+        menuSubtitle: "Glutes, hips, and low back",
         stretches: [
-          {
-            name: "Reclined figure four",
-            image: assetPath("poses/reclined-figure-four.png"),
-            support: "Hold behind the thigh or keep the foot grounded if that is kinder to the hip.",
-            side: true,
-            cues: [
-              [0, "Lie down and cross the right ankle over the left thigh. Draw the legs in only as far as your breath stays smooth."],
-              [45, "Let the sacrum be heavy. Keep the shoulders relaxed and soften your grip."],
-              [100, "Switch sides. Cross the left ankle and settle into the opposite outer hip."],
-              [150, "Stay patient. Let the stretch arrive rather than chasing it."],
-              [190, "Release both feet to the mat and prepare to sit up slowly."]
-            ]
-          },
-          {
-            name: "Shoelace fold",
-            image: assetPath("poses/shoelace-fold.png"),
-            support: "Sit on a blanket or keep one leg extended if crossing the thighs bothers the knees.",
-            side: true,
-            cues: [
-              [0, "Cross the right thigh over the left or choose an easier seat. Fold forward only as much as the knees allow."],
-              [45, "Let the spine round naturally and support the forehead if the floor is far away."],
-              [100, "Change the cross. Left thigh over right, or choose your alternative shape."],
-              [150, "Feel the outer hips without pulling yourself down."],
-              [190, "Use your hands to come up slowly."]
-            ]
-          },
-          {
-            name: "Child's pose side stretch",
-            image: assetPath("poses/childs-pose-side.png"),
-            support: "Rest your head on support if needed. Knees can be wide or closer together.",
-            side: true,
-            cues: [
-              [0, "Begin in child's pose and walk both hands to the right. Breathe into the left hip, waist, and side body."],
-              [45, "Let the hips stay heavy. Soften the space between the shoulder blades."],
-              [100, "Walk through center and over to the left. Breathe into the right hip and side ribs."],
-              [150, "Keep the stretch broad and quiet, like making more room for your breath."],
-              [190, "Walk back to center and slowly roll up."]
-            ]
-          },
-          {
-            name: "Seated twist",
-            image: assetPath("poses/seated-twist.png"),
-            support: "Sit tall on a folded blanket. Twist from the ribs and keep the breath easy.",
-            side: true,
-            cues: [
-              [0, "Sit comfortably and turn gently to the right. Let the hips stay grounded as the ribs rotate."],
-              [45, "Each inhale creates length. Each exhale softens the low back and shoulders."],
-              [100, "Unwind and turn to the left. Keep the twist gentle and spacious."],
-              [150, "Let the eyes, jaw, and belly soften."],
-              [190, "Return to center and prepare for closing rest."]
-            ]
-          }
+          { name: "Reclined figure four", image: assetPath("poses/reclined-figure-four.png"), support: "Hold behind the thigh or keep the foot grounded if that is kinder to the hip.", side: true, cues: [[0, "Lie down and cross the right ankle over the left thigh. Draw the legs in only as far as your breath stays smooth."], [45, "Let the sacrum be heavy. Keep the shoulders relaxed and soften your grip."], [100, "Switch sides. Cross the left ankle and settle into the opposite outer hip."], [150, "Stay patient. Let the stretch arrive rather than chasing it."], [190, "Release both feet to the mat and prepare to sit up slowly."]] },
+          { name: "Shoelace fold", image: assetPath("poses/shoelace-fold.png"), support: "Sit on a blanket or keep one leg extended if crossing the thighs bothers the knees.", side: true, cues: [[0, "Cross the right thigh over the left or choose an easier seat. Fold forward only as much as the knees allow."], [45, "Let the spine round naturally and support the forehead if the floor is far away."], [100, "Change the cross. Left thigh over right, or choose your alternative shape."], [150, "Feel the outer hips without pulling yourself down."], [190, "Use your hands to come up slowly."]] },
+          { name: "Half butterfly fold", image: assetPath("poses/half-butterfly.png"), support: "Sit on a folded blanket if your low back rounds strongly. Bend the long leg as much as needed.", side: true, cues: [[0, "Extend the right leg and bring the left sole toward the inner thigh. Fold forward only as far as your breath stays easy."], [45, "If the hamstring feels intense, bend the extended knee or come a little higher."], [100, "Roll up slowly and change sides. Let the left leg extend and fold again with a relaxed neck."], [150, "Notice the back of the leg, the outer hip, and the breath moving across the ribs."], [190, "Use your hands to come up, one vertebra at a time."]] },
+          { name: "Seated twist", image: assetPath("poses/seated-twist.png"), support: "Sit tall on a folded blanket. Twist from the ribs and keep the breath easy.", side: true, cues: [[0, "Sit comfortably and turn gently to the right. Let the hips stay grounded as the ribs rotate."], [45, "Each inhale creates length. Each exhale softens the low back and shoulders."], [100, "Unwind and turn to the left. Keep the twist gentle and spacious."], [150, "Let the eyes, jaw, and belly soften."], [190, "Return to center and prepare for closing rest."]] }
         ]
       },
       {
-        id: "lower-mobility",
-        title: "15-Minute Lower Body Mobility Yin",
-        menuTitle: "Lower Body 3",
-        menuSubtitle: "Quads, calves, and hips",
+        id: "upper",
+        title: "15-Minute Upper Body Yin: Shoulders and Chest",
+        menuTitle: "Upper Body 1",
+        menuSubtitle: "Puppy, thread, broken wing",
+        total: 900,
+        tightTiming: true,
+        manualClosing: true,
         stretches: [
-          {
-            name: "Low lunge quad release",
-            image: assetPath("poses/dragon-lunge.png"),
-            support: "Pad the back knee and keep both hands supported. Stay higher if the front of the hip or quad feels too intense.",
-            side: true,
-            cues: [
-              [0, "Step the right foot forward into a low lunge. Slide the left knee back until you feel a gentle opening through the front of the left hip and thigh."],
-              [45, "Keep the front knee stacked over the ankle. Let the pelvis feel heavy while the chest stays easy."],
-              [100, "Slowly switch sides. Left foot forward, right knee down. Move with control and reset your supports."],
-              [150, "Breathe into the front of the right hip and thigh. Keep the low back long instead of forcing the hips down."],
-              [190, "Walk the hands in and prepare to release from the lunge."]
-            ]
-          },
-          {
-            name: "Reclined calf and hamstring hold",
-            image: assetPath("poses/reclined-hamstring.png"),
-            support: "Use a strap or towel behind the thigh or around the ball of the foot. Keep the knee softly bent.",
-            side: true,
-            cues: [
-              [0, "Lie on your back and lift the right leg. Flex and soften the foot a few times, then hold where the calf and hamstring can release."],
-              [45, "Let both hips stay grounded. If the back of the leg grips, bend the knee more."],
-              [100, "Switch legs. Lower the right leg and lift the left with the same patient setup."],
-              [150, "Breathe behind the knee, calf, and heel without pulling aggressively."],
-              [190, "Release the strap or hands and bring both feet back to the mat."]
-            ]
-          },
-          {
-            name: "Upright swan hip opener",
-            image: assetPath("poses/swan-pigeon.png"),
-            support: "Place a blanket under the front hip or stay seated higher on blocks. Keep the front knee comfortable.",
-            side: true,
-            cues: [
-              [0, "Bring the right shin forward for swan pose, but stay upright. Let the back leg lengthen and support the right hip."],
-              [45, "Instead of folding, lift through the chest and let the outer hip soften gradually."],
-              [100, "Switch sides with care. Left shin forward, right leg back, and set your support before settling."],
-              [150, "Keep the breath natural. Let the shape be steady and sustainable."],
-              [190, "Press into the hands and ease out of the pose slowly."]
-            ]
-          },
-          {
-            name: "Half butterfly side reach",
-            image: assetPath("poses/half-butterfly.png"),
-            support: "Sit on a folded blanket and bend the extended knee if the hamstring pulls too strongly.",
-            side: true,
-            cues: [
-              [0, "Extend the right leg and fold the left foot in. Reach gently toward the right leg or ankle and let the left side waist soften."],
-              [45, "Keep the stretch wide through the back of the leg and side body. Relax the neck."],
-              [100, "Switch sides. Extend the left leg, fold the right foot in, and reach without forcing."],
-              [150, "Let the breath move into the ribs and outer hip. Stay slow and grounded."],
-              [190, "Use your hands to come back upright and prepare for closing rest."]
-            ]
-          }
+          { name: "Puppy with blocks", duration: 120, image: assetPath("poses/puppy-blocks.png"), support: "Place blocks under the forearms or elbows. Keep hips over knees and avoid collapsing into the low back.", cues: [[0, "Come to hands and knees, place the forearms or elbows on blocks, and walk the blocks forward for puppy pose."], [45, "Let the chest soften while the hips stay over the knees. Breathe into the shoulders and side ribs."], [105, "Press into the hands or forearms and slowly walk back in for thread the needle."]] },
+          { name: "Thread the needle", duration: 360, image: assetPath("poses/thread-the-needle.png"), support: "Use a blanket under the shoulder or side of the head if the floor feels far away.", side: true, cues: [[0, "From hands and knees, thread the right arm underneath you. Rest the right shoulder and side of the head."], [75, "Let the upper back rotate gently. The left hand can stay grounded, reach forward, or wrap behind the back."], [165, "Prepare to switch sides. Press into the left hand and unwind slowly."], [180, "Switch sides. Thread the left arm through and settle with the neck easy."], [255, "Breathe across the back of the shoulder blades. Let the jaw and belly soften."], [345, "Press into the grounded hand and unwind carefully for broken wing pose."]] },
+          { name: "Broken wing pose", duration: 240, image: assetPath("poses/broken-wing-pose.png"), support: "Keep the shoulder sensation broad. Reduce the roll if you feel pinching, numbness, or sharpness.", side: true, cues: [[0, "Lie on your belly and extend the right arm out at shoulder height. Gently roll the chest open away from the right arm."], [50, "Use the left hand lightly for support. Let the right shoulder and chest open without forcing."], [115, "Prepare to switch sides. Roll back to the belly with control."], [120, "Switch sides. Extend the left arm out and gently roll the chest open away from the left arm."], [170, "Keep the neck relaxed. Let the breath stay smooth and quiet."], [230, "Roll back to your belly and prepare for crocodile pose."]] },
+          { name: "Crocodile pose", duration: 120, image: assetPath("poses/crocodile-pose.png"), support: "Stack the forearms and rest the forehead or one cheek. Let the belly breathe into the mat.", side: true, cues: [[0, "Stack the forearms and rest the forehead or right cheek for crocodile pose. Let the shoulders drop away from the ears."], [45, "Feel the breath move into the belly and low ribs. Let the upper back settle."], [60, "Switch the head turn if you are resting on one cheek. Keep the arms relaxed and the breath easy."], [105, "Stay heavy and quiet for the final closing breath."]] },
+          { name: "Closing breath", duration: 60, image: assetPath("poses/upper-closing-breath.png"), support: "Stay in crocodile or turn onto your back if that feels better.", cues: [[0, "Remain in crocodile pose for one final minute. Let the shoulders, chest, and throat soften completely."], [30, "Notice the breath moving without effort. Let the practice settle."], [52, "Your upper body yin class is complete. Move slowly as you lift your head and return to your day."]] }
+        ]
+      },
+      {
+        id: "upper-deep",
+        title: "15-Minute Upper Body Yin: Deep Shoulder Release",
+        menuTitle: "Upper Body 2",
+        menuSubtitle: "Heart, fish, and shoulder release",
+        stretches: [
+          { name: "Melting heart", image: assetPath("poses/melting-heart.png"), support: "Keep hips over knees. Rest the forehead on a blanket if the shoulders need more space.", cues: [[0, "Come to hands and knees and walk your hands forward into melting heart. Keep the hips stacked over the knees."], [45, "Let the chest soften toward the mat while the breath widens across the side ribs."], [100, "Stay with this shape or move the hands slightly wider if that gives the shoulders more room."], [150, "Keep the low back quiet. Let the front of the chest open slowly without forcing it."], [190, "Walk the hands back in and sit toward your heels with control."]] },
+          { name: "Supported fish", image: assetPath("poses/supported-fish.png"), support: "Place a bolster or rolled blanket under the shoulder blades, not under the low back.", cues: [[0, "Lower onto your support for supported fish. Let the chest broaden and the arms rest open."], [45, "If the neck feels strained, place a folded blanket under the head or reduce the height."], [100, "Stay still and let the collarbones widen from the center out."], [150, "Breathe naturally. Let the ribs move without pressing the spine into a bigger arch."], [190, "Roll carefully to one side to come off the support."]] },
+          { name: "Criss cross shoulder yin stretch", image: assetPath("poses/criss-cross-shoulder.png"), support: "Lie on your stomach with the arms crossed under the upper chest. Let the head rest heavy and keep the sensation broad, not sharp.", side: true, cues: [[0, "Lie on your stomach and open the arms into a T. Slide the right arm underneath the left across the upper chest, then walk both hands away from the body."], [45, "Let the forehead or cheek rest heavy. Breathe into the back of the right shoulder and upper back."], [100, "Switch the cross slowly. Slide the left arm underneath the right and walk both hands out again."], [150, "If you feel pinching, numbness, or sharp sensation, ease out or reduce the pressure."], [190, "Uncross the arms with care and bring the hands beside the ribs."]] },
+          { name: "Seated neck release", image: assetPath("poses/neck-release.png"), support: "Sit tall and use only gentle hand weight. Keep the opposite shoulder soft and heavy.", side: true, cues: [[0, "Sit comfortably and let the right ear soften toward the right shoulder. Rest the right hand lightly on the head without pulling."], [45, "Reach the left fingertips low and breathe into the left side of the neck and shoulder."], [100, "Return through center and switch sides. Let the left ear soften toward the left shoulder."], [150, "Keep the jaw relaxed and the breath smooth. The stretch should feel gentle, never sharp."], [190, "Release the hand, lift the head slowly, and roll the shoulders before closing rest."]] }
         ]
       },
       {
         id: "foam",
-        title: "15-Minute Foam Roller Yin",
+        title: "15-Minute Foam Roller Recovery",
         menuTitle: "Foam Roller",
-        menuSubtitle: "Recovery and release",
+        menuSubtitle: "Calves, quads, glutes, upper back",
         stretches: [
-          {
-            name: "Calf roll",
-            image: assetPath("poses/foam-calf-roll.png"),
-            support: "Keep your hands behind you and control pressure with the grounded leg.",
-            side: true,
-            cues: [
-              [0, "Place the foam roller under the right calf. Move just an inch or two at a time and pause where the tissue feels dense."],
-              [45, "Point and flex the ankle slowly while keeping the pressure manageable."],
-              [100, "Switch legs. Place the roller under the left calf and keep the movement small."],
-              [150, "If the pressure is too strong, keep the opposite foot on the floor for more support."],
-              [190, "Lower both legs and move the roller aside for the next area."]
-            ]
-          },
-          {
-            name: "Quad roll",
-            image: assetPath("poses/foam-quad-roll.png"),
-            support: "Stay on the front thigh muscle. Avoid rolling directly over the kneecap or hip point.",
-            side: true,
-            cues: [
-              [0, "Place the roller under the right thigh and come to forearms. Glide slowly from upper thigh toward above the knee."],
-              [45, "Pause and breathe when you find a tender area. Keep the sensation broad and tolerable."],
-              [100, "Switch thighs. Bring the roller under the left quad and move slowly."],
-              [150, "Keep the belly gently engaged so the low back stays supported."],
-              [190, "Press back carefully and come down to one side."]
-            ]
-          },
-          {
-            name: "Glute roll",
-            image: assetPath("poses/foam-glute-roll.png"),
-            support: "Sit on the roller and cross one ankle over the opposite thigh for a figure-four shape.",
-            side: true,
-            cues: [
-              [0, "Sit on the roller and cross the right ankle over the left thigh. Lean slightly toward the right glute."],
-              [45, "Use your hands and grounded foot to keep the pressure steady and safe."],
-              [100, "Switch sides. Cross the left ankle and lean gently toward the left glute."],
-              [150, "Small circles can help. Stay away from sharp or nervy sensation."],
-              [190, "Uncross the legs and place the roller behind your upper back."]
-            ]
-          },
-          {
-            name: "Thoracic roll",
-            image: assetPath("poses/foam-thoracic-roll.png"),
-            support: "Keep the roller across the upper back and support your head with your hands.",
-            cues: [
-              [0, "Lie back with the roller under the shoulder blades. Support the head and keep the ribs soft."],
-              [45, "Roll from mid-back to upper back. Stay away from the low back and neck."],
-              [100, "Pause over one spot and gently extend over the roller as you exhale."],
-              [150, "Move slowly. Let the upper back open without forcing a big arch."],
-              [190, "Roll to one side and come up slowly."]
-            ]
-          }
+          { name: "Calf roll", image: assetPath("poses/foam-calf-roll.png"), support: "Keep your hands behind you and control pressure with the grounded leg.", side: true, cues: [[0, "Place the foam roller under the right calf. Move just an inch or two at a time and pause where the tissue feels dense."], [45, "Point and flex the ankle slowly while keeping the pressure manageable."], [100, "Switch legs. Place the roller under the left calf and keep the movement small."], [150, "If the pressure is too strong, keep the opposite foot on the floor for more support."], [190, "Lower both legs and move the roller aside for the next area."]] },
+          { name: "Quad roll", image: assetPath("poses/foam-quad-roll.png"), support: "Stay on the front thigh muscle. Avoid rolling directly over the kneecap or hip point.", side: true, cues: [[0, "Place the roller under the right thigh and come to forearms. Glide slowly from upper thigh toward above the knee."], [45, "Pause and breathe when you find a tender area. Keep the sensation broad and tolerable."], [100, "Switch thighs. Bring the roller under the left quad and move slowly."], [150, "Keep the belly gently engaged so the low back stays supported."], [190, "Press back carefully and come down to one side."]] },
+          { name: "Glute roll", image: assetPath("poses/foam-glute-roll.png"), support: "Sit on the roller and cross one ankle over the opposite thigh for a figure-four shape.", side: true, cues: [[0, "Sit on the roller and cross the right ankle over the left thigh. Lean slightly toward the right glute."], [45, "Use your hands and grounded foot to keep the pressure steady and safe."], [100, "Switch sides. Cross the left ankle and lean gently toward the left glute."], [150, "Small circles can help. Stay away from sharp or nervy sensation."], [190, "Uncross the legs and place the roller behind your upper back."]] },
+          { name: "Thoracic roll", image: assetPath("poses/foam-thoracic-roll.png"), support: "Keep the roller across the upper back and support your head with your hands.", cues: [[0, "Lie back with the roller under the shoulder blades. Support the head and keep the ribs soft."], [45, "Roll from mid-back to upper back. Stay away from the low back and neck."], [100, "Pause over one spot and gently extend over the roller as you exhale."], [150, "Move slowly. Let the upper back open without forcing a big arch."], [190, "Roll to one side and come up slowly."]] }
         ]
       },
       {
         id: "full",
-        title: "15-Minute Full Body Yin",
+        title: "15-Minute Full Body Yin: Complete Reset",
         menuTitle: "Full Body",
-        menuSubtitle: "Hips, spine, and rest",
+        menuSubtitle: "Sphinx, caterpillar, banana, twist",
         stretches: [
-          {
-            name: "Child's pose side stretch",
-            image: assetPath("poses/childs-pose-side.png"),
-            support: "Rest your head on support if needed. Knees can be wide or closer together.",
-            side: true,
-            cues: [
-              [0, "Begin in child's pose and walk both hands to the right. Breathe into the left side body."],
-              [45, "Let the hips stay heavy. Soften the space between the shoulder blades."],
-              [100, "Walk through center and over to the left. Breathe into the right side ribs."],
-              [150, "Keep the stretch broad and quiet, like making more room for your breath."],
-              [190, "Walk back to center and slowly roll up."]
-            ]
-          },
-          {
-            name: "Shoelace fold",
-            image: assetPath("poses/shoelace-fold.png"),
-            support: "Sit on a blanket or keep one leg extended if crossing the thighs bothers the knees.",
-            side: true,
-            cues: [
-              [0, "Cross the right thigh over the left or choose an easier seat. Fold forward only as much as the knees allow."],
-              [45, "Let the spine round naturally and support the forehead if the floor is far away."],
-              [100, "Change the cross. Left thigh over right, or choose your alternative shape."],
-              [150, "Feel the outer hips without pulling yourself down."],
-              [190, "Use your hands to come up slowly."]
-            ]
-          },
-          {
-            name: "Seated twist",
-            image: assetPath("poses/seated-twist.png"),
-            support: "Sit tall on a folded blanket. Twist from the ribs and keep the breath easy.",
-            side: true,
-            cues: [
-              [0, "Sit comfortably and turn gently to the right. Let your hands land wherever they help you stay tall."],
-              [45, "Each inhale creates length. Each exhale softens the shoulders."],
-              [100, "Unwind and turn to the left. Keep the twist gentle and spacious."],
-              [150, "Let the eyes, jaw, and belly soften."],
-              [190, "Return to center and pause before lying down."]
-            ]
-          },
-          {
-            name: "Reclined figure four",
-            image: assetPath("poses/reclined-figure-four.png"),
-            support: "Hold behind the thigh or keep the foot grounded if that is kinder to the hip.",
-            side: true,
-            cues: [
-              [0, "Lie down and cross the right ankle over the left thigh. Draw the legs in only as far as the breath stays smooth."],
-              [45, "Let the sacrum be heavy. Soften your grip and the muscles around your face."],
-              [100, "Switch sides. Cross the left ankle and settle into the opposite hip."],
-              [150, "Stay patient. Let the stretch arrive rather than chasing it."],
-              [190, "Release both feet and rest flat on your back."]
-            ]
-          }
+          { name: "Sphinx pose", image: assetPath("poses/sphinx-pose.png"), support: "Keep elbows under or slightly ahead of shoulders. Lower onto a blanket if the low back feels compressed.", cues: [[0, "Come onto your belly and place the forearms down for sphinx pose. Let the chest lift gently without forcing the low back."], [45, "Soften the shoulders away from the ears and feel the breath move into the belly and front body."], [100, "Stay steady, or lower the chest slightly if the back asks for less intensity."], [150, "Let the legs and feet relax while the spine stays long."], [190, "Lower the chest slowly and prepare to sit for caterpillar fold."]] },
+          { name: "Caterpillar fold", image: assetPath("poses/caterpillar-fold.png"), support: "Sit on a folded blanket and bend the knees as much as needed. Let the spine round naturally.", cues: [[0, "Sit with both legs extended for caterpillar. Fold forward passively and let the hands rest wherever they land."], [45, "Release the neck and jaw. Let the back body widen with each slow exhale."], [100, "Bend the knees more if the hamstrings pull too strongly."], [150, "Stay soft through the shoulders and let gravity do the work."], [190, "Use the hands to roll up slowly and lie down for banana pose."]] },
+          { name: "Banana pose", image: assetPath("poses/banana-pose.png"), support: "Keep both hips and shoulders heavy. Cross the ankles only if it feels comfortable.", side: true, cues: [[0, "Lie on your back and walk the arms and legs to the right, making a gentle banana shape through the left side body."], [45, "Keep the left hip heavy and breathe into the left ribs and waist."], [100, "Come through center and switch sides. Walk the arms and legs to the left."], [150, "Let the right side body open without lifting the hips or shoulders."], [190, "Return to center and prepare for a supine spinal twist."]] },
+          { name: "Supine spinal twist", image: assetPath("poses/supine-spinal-twist.png"), support: "Use a blanket between the knees or under the top knee if the twist feels too strong.", side: true, cues: [[0, "Draw the knees in and let them drop to the right for a supine spinal twist. Open the arms wide."], [45, "Let the left shoulder be heavy and keep the breath easy across the ribs."], [100, "Bring the knees through center and switch sides, letting the knees drop left."], [150, "Soften the belly and let the spine unwind gradually."], [190, "Return to center and stretch the legs out for final rest."]] },
+          { name: "Savasana rest", image: assetPath("poses/savasana-rest.png"), support: "Let the legs relax long and turn the palms up. Support the knees or head if desired.", cues: [[0, "Settle into savasana. Let the legs be heavy, palms open, and eyes soft or closed."], [45, "Feel the whole body supported by the floor. Nothing needs to be held."], [100, "Let the breath become quiet and natural."], [150, "Notice the hips, spine, shoulders, and jaw softening together."], [190, "Your full body yin class is complete. Move slowly when you are ready."]] }
         ]
       }
     ];
@@ -931,28 +718,35 @@
       return `${minutes}:${secs}`;
     }
 
+    function classDuration(yogaClass = activeClass) {
+      return yogaClass.total || TOTAL;
+    }
+
     function makeTimeline(yogaClass) {
       const events = [];
       let cursor = 0;
+      const total = classDuration(yogaClass);
+      const transitionLength = yogaClass.tightTiming ? 0 : TRANSITION;
 
       yogaClass.stretches.forEach((stretch, index) => {
+        const stretchLength = stretch.duration || STRETCH;
         stretch.cues.forEach(([offset, cue], cueIndex) => {
-          const switchedSide = stretch.side && offset >= 100;
+          const switchedSide = stretch.side && offset >= stretchLength / 2;
           events.push({
             time: cursor + offset,
             type: "stretch",
             pose: stretch.name,
             image: stretch.image,
             mirrored: switchedSide,
-            label: cueIndex === 0 ? `Stretch ${index + 1}` : switchedSide && offset === 100 ? "Switch sides" : "Hold",
+            label: cueIndex === 0 ? `Stretch ${index + 1}` : switchedSide && offset === Math.round(stretchLength / 2) ? "Switch sides" : "Hold",
             support: stretch.support,
             cue,
             next: yogaClass.stretches[index + 1]?.name || "Closing rest"
           });
         });
 
-        cursor += STRETCH;
-        if (index < yogaClass.stretches.length - 1) {
+        cursor += stretchLength;
+        if (transitionLength && index < yogaClass.stretches.length - 1) {
           events.push({
             time: cursor,
             type: "transition",
@@ -964,32 +758,34 @@
             cue: `Release ${stretch.name.toLowerCase()}. In ten seconds we move to ${yogaClass.stretches[index + 1].name}.`,
             next: yogaClass.stretches[index + 1].name
           });
-          cursor += TRANSITION;
+          cursor += transitionLength;
         }
       });
 
-      events.push({
-        time: TOTAL - CLOSING,
-        type: "closing",
-        pose: "Closing rest",
-        image: assetPath("instructor-avatar-reference.png"),
-        mirrored: false,
-        label: "Rest",
-        support: "Let the work land. Stay as long as you like after the timer ends.",
-        cue: "Release the final shape. Rest on your back or seated. Notice the lower breath, the weight of the body, and the quiet after practice.",
-        next: "Class complete"
-      });
-      events.push({
-        time: TOTAL - 12,
-        type: "closing",
-        pose: "Class complete",
-        image: assetPath("instructor-avatar-reference.png"),
-        mirrored: false,
-        label: "Complete",
-        support: "Thank yourself for taking these fifteen minutes.",
-        cue: "Your class is complete. Move slowly as you return to your day.",
-        next: "Restart class"
-      });
+      if (!yogaClass.manualClosing) {
+        events.push({
+          time: total - CLOSING,
+          type: "closing",
+          pose: "Closing rest",
+          image: assetPath("instructor-avatar-reference.png"),
+          mirrored: false,
+          label: "Rest",
+          support: "Let the work land. Stay as long as you like after the timer ends.",
+          cue: "Release the final shape. Rest on your back or seated. Notice the lower breath, the weight of the body, and the quiet after practice.",
+          next: "Class complete"
+        });
+        events.push({
+          time: total - 12,
+          type: "closing",
+          pose: "Class complete",
+          image: assetPath("instructor-avatar-reference.png"),
+          mirrored: false,
+          label: "Complete",
+          support: "Thank yourself for taking these fifteen minutes.",
+          cue: "Your class is complete. Move slowly as you return to your day.",
+          next: "Restart class"
+        });
+      }
 
       return events.sort((a, b) => a.time - b.time);
     }
@@ -1006,7 +802,7 @@
       for (const item of timeline) {
         if (item.time > elapsed && (item.label.startsWith("Stretch") || item.type === "closing")) return item.time;
       }
-      return TOTAL;
+      return classDuration();
     }
 
     function renderImage(event) {
@@ -1076,19 +872,20 @@
       nextUp.textContent = event.next;
       sceneBadge.textContent = event.label;
       elapsedEl.textContent = formatTime(elapsed);
-      remainingEl.textContent = formatTime(TOTAL - elapsed);
+      remainingEl.textContent = formatTime(classDuration() - elapsed);
+      scrub.max = classDuration();
       scrub.value = Math.round(elapsed);
-      barFill.style.width = `${Math.min(100, (elapsed / TOTAL) * 100)}%`;
+      barFill.style.width = `${Math.min(100, (elapsed / classDuration()) * 100)}%`;
       if (shouldSpeak) speak(spokenCue(event), `${activeClass.id}-${event.time}`);
     }
 
     function tick(now) {
       if (!playing) return;
-      elapsed = Math.min(TOTAL, (now - startedAt) / 1000);
+      elapsed = Math.min(classDuration(), (now - startedAt) / 1000);
       const previousCue = lastCueId;
       updateScene(true);
 
-      if (elapsed >= TOTAL) {
+      if (elapsed >= classDuration()) {
         playing = false;
         playButton.textContent = "Play";
         window.speechSynthesis?.cancel();
@@ -1166,7 +963,7 @@
     playButton.addEventListener("click", play);
     restartButton.addEventListener("click", restart);
     skipButton.addEventListener("click", () => {
-      elapsed = Math.min(nextStretchTime(), TOTAL);
+      elapsed = Math.min(nextStretchTime(), classDuration());
       lastCueId = "";
       startedAt = performance.now() - elapsed * 1000;
       window.speechSynthesis?.cancel();
