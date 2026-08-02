@@ -601,6 +601,20 @@
         ]
       },
       {
+        id: "lower-august",
+        title: "16-Minute Lower Body August",
+        menuTitle: "Lower Body August",
+        menuSubtitle: "Butterfly, figure 4, dragon, swan",
+        total: 960,
+        manualClosing: true,
+        stretches: [
+          { name: "Butterfly", duration: 240, image: assetPath("poses/lower-august-butterfly.png"), support: "Sit on a folded blanket if the low back rounds strongly. Keep the feet farther away from the pelvis for a softer yin version and never press the knees down.", cues: [[0, "Sit with the soles of the feet together and let the knees open wide for butterfly pose."], [60, "Let the spine round naturally and fold only as far as the hips, inner thighs, and low back can soften."], [120, "Rest the hands on the feet, ankles, or floor. If the inner thighs feel strained, move the feet farther forward."], [180, "Let the head and shoulders release while the breath stays slow and easy."], [230, "Use your hands to roll up slowly and lie onto your back for reclined figure four."]] },
+          { name: "Reclined figure four", duration: 240, image: assetPath("poses/lower-august-reclined-figure-four.png"), support: "Keep the head and shoulders relaxed. Hold behind the thigh or keep the bottom foot grounded if the hip needs less intensity.", side: true, cues: [[0, "Lie on your back and cross the right ankle over the left thigh for reclined figure four."], [60, "Draw the legs in only as far as the right hip can soften without pressure in the knee."], [115, "Prepare to switch sides. Release the legs slowly and keep the breath steady."], [120, "Switch sides. Cross the left ankle over the right thigh and choose your comfortable hold."], [180, "Let the sacrum stay heavy and soften the shoulders into the mat."], [230, "Release both feet and roll to one side to set up for dragon pose."]] },
+          { name: "Dragon pose", duration: 240, image: assetPath("poses/lower-august-dragon-pose.png"), support: "Pad the back knee and use blocks under the hands. Keep the front knee stacked over the ankle and stay high enough to breathe easily.", side: true, cues: [[0, "Step the right foot forward for dragon pose and lower the left knee onto padding."], [60, "Let the pelvis get heavy while the chest stays supported over blocks or hands."], [115, "Prepare to switch sides. Move slowly and protect both knees."], [120, "Switch sides. Step the left foot forward and lower the right knee with padding."], [180, "Breathe into the front of the right hip and thigh without forcing the low back."], [230, "Walk the hands back in and transition carefully to sleeping swan."]] },
+          { name: "Sleeping swan", duration: 240, image: assetPath("poses/lower-august-sleeping-swan.png"), support: "Support the front hip with a blanket or block. Keep the front knee comfortable and do not force the shin parallel.", side: true, cues: [[0, "Bring the right shin forward for sleeping swan and slide the left leg back."], [60, "Fold forward only as far as the right outer hip can soften, using a bolster or folded blanket for support."], [115, "Prepare to switch sides. Press into the hands and come out slowly."], [120, "Switch sides. Bring the left shin forward and slide the right leg back, then support the hip before folding."], [180, "Let the belly, jaw, and shoulders soften while keeping the front knee free from pressure."], [230, "Press into the hands and come up slowly. Your lower body August class is complete."]] }
+        ]
+      },
+      {
         id: "foam",
         title: "15-Minute Foam Roller Recovery",
         menuTitle: "Foam Roller",
@@ -631,7 +645,12 @@
       }
     ];
 
-    classes.sort((a, b) => (a.id === "upper-august" ? -1 : b.id === "upper-august" ? 1 : 0));
+    const featuredClassOrder = ["upper-august", "lower-august"];
+    classes.sort((a, b) => {
+      const aOrder = featuredClassOrder.indexOf(a.id);
+      const bOrder = featuredClassOrder.indexOf(b.id);
+      return (aOrder === -1 ? featuredClassOrder.length : aOrder) - (bOrder === -1 ? featuredClassOrder.length : bOrder);
+    });
 
     const classMenu = document.getElementById("classMenu");
     const playButton = document.getElementById("playButton");
