@@ -586,6 +586,21 @@
         ]
       },
       {
+        id: "upper-august",
+        title: "15-Minute Upper Body August",
+        menuTitle: "Upper Body August",
+        menuSubtitle: "Heart, thread, sphinx, fish, banana",
+        total: 900,
+        manualClosing: true,
+        stretches: [
+          { name: "Melting heart", duration: 180, image: assetPath("poses/upper-august-melting-heart.png"), support: "Keep hips stacked over knees and walk the hands forward. Rest the forehead on the mat, a blanket, or a block so the neck can soften.", cues: [[0, "Come to hands and knees for melting heart. Keep the hips over the knees and slowly walk the hands forward."], [45, "Let the chest soften toward the mat without forcing the shoulders. Rest the forehead on the floor or a prop."], [90, "Keep the arms active enough to feel supported while the front ribs and shoulders soften with the breath."], [135, "If the shoulders feel pinchy, widen the hands or support the chest with a folded blanket."], [170, "Press into the hands and walk back slowly to set up for thread the needle."]] },
+          { name: "Thread the needle", duration: 180, image: assetPath("poses/upper-august-thread-needle.png"), support: "Start from tabletop and keep hips over knees. Let the shoulder and side of the head rest only as low as your neck and shoulder allow.", side: true, cues: [[0, "From hands and knees, slide the right arm underneath the body toward the left. Lower the right shoulder and side of the head toward the mat."], [45, "Keep the hips above the knees and breathe into the upper back. The left hand can stay planted for support."], [85, "Prepare to switch sides. Press into the left hand and unwind slowly."], [90, "Switch sides. Slide the left arm underneath the body toward the right and settle the left shoulder down."], [135, "Let the twist come from the upper back. Keep the neck easy and avoid forcing the shoulder to the floor."], [170, "Press into the grounded hand, unwind carefully, and lower onto your belly for sphinx."]] },
+          { name: "Sphinx pose", duration: 180, image: assetPath("poses/upper-august-sphinx.png"), support: "Keep elbows under or slightly in front of shoulders. Let the legs be heavy and reduce the lift if the low back feels compressed.", cues: [[0, "Lie on your belly and place the forearms on the mat for sphinx pose. Let the elbows rest under or slightly ahead of the shoulders."], [45, "Press gently through the forearms and lift the chest forward and up. Soften the shoulders away from the ears."], [90, "Keep the neck long and the legs relaxed. The backbend should feel mild and spacious, not pinchy."], [135, "Breathe into the front ribs and collarbones while the belly stays soft against the mat."], [170, "Lower the chest slowly and roll onto your back for the supported fish stretch on a block."]] },
+          { name: "Supported fish on block", duration: 180, image: assetPath("poses/upper-august-supported-fish-block.png"), support: "Place the block under the shoulder blades, not the low back. Keep knees bent and support the head if the neck feels strained.", cues: [[0, "Sit in front of a yoga block and lower down so the block supports the upper back and shoulder blades."], [45, "Let the chest open gently. Keep the knees bent and feet grounded if that helps the low back feel steady."], [90, "Rest the arms out to the sides with palms open. If the neck feels strained, support the head with a folded blanket or lower block."], [135, "Breathe across the front of the chest and collarbones without pressing into a bigger arch."], [170, "Roll carefully to one side, move the block away, and lie onto your back for banana stretch."]] },
+          { name: "Banana stretch", duration: 180, image: assetPath("poses/upper-august-banana.png"), support: "Lie on your back with legs straight. Cross one foot or ankle over the other, keep the buttocks grounded, and move the feet and upper body to one side so the body forms a crescent or banana shape.", side: true, cues: [[0, "Lie on your back with the legs straight on the floor. Reach the arms overhead and clasp the hands or hold opposite elbows."], [30, "Cross the right foot or ankle over the left. With the buttocks firmly glued to the earth, move your feet and upper body to the right."], [60, "Let the whole body form a crescent or banana shape. Be careful not to twist or roll the hips off the floor."], [85, "Prepare to switch sides. Uncross the ankles and bring the feet and upper body slowly back through center."], [90, "Switch sides. Cross the left foot or ankle over the right, then move your feet and upper body to the left."], [125, "Keep both hips grounded. As the body opens, you can move the feet and upper body a little farther left without forcing."], [170, "Return to center and release the arms by your sides. Your upper body August class is complete."]] }
+        ]
+      },
+      {
         id: "foam",
         title: "15-Minute Foam Roller Recovery",
         menuTitle: "Foam Roller",
@@ -615,6 +630,8 @@
         ]
       }
     ];
+
+    classes.sort((a, b) => (a.id === "upper-august" ? -1 : b.id === "upper-august" ? 1 : 0));
 
     const classMenu = document.getElementById("classMenu");
     const playButton = document.getElementById("playButton");
