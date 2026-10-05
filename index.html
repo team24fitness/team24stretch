@@ -615,6 +615,20 @@
         ]
       },
       {
+        id: "lower-october",
+        title: "15-Minute Lower Body October",
+        menuTitle: "Lower Body October",
+        menuSubtitle: "Butterfly, half butterfly, dragon, supported child",
+        total: 900,
+        manualClosing: true,
+        stretches: [
+          { name: "Butterfly", duration: 240, image: assetPath("poses/lower-october-butterfly.png"), support: "Sit on a folded blanket if the pelvis rolls back. Let the feet sit farther forward than a fitness-style butterfly so the knees and inner thighs can soften.", cues: [[0, "Begin seated for butterfly. Bring the soles of the feet together and let the knees open wide."], [60, "Let the spine round naturally as you fold forward. Keep the feet farther from the pelvis if that feels better in the hips."], [120, "Relax the shoulders and jaw. Let the inner thighs and low back soften without pressing the knees down."], [180, "Stay with slow breathing and let the hands rest on the feet, ankles, or floor."], [230, "Use your hands to roll up slowly and set up for half butterfly."]] },
+          { name: "Half butterfly", duration: 240, image: assetPath("poses/lower-october-half-butterfly.png"), support: "Sit on a blanket and bend the extended knee as much as needed. Fold from a relaxed spine rather than pulling toward the leg.", side: true, cues: [[0, "Extend the right leg and bring the left sole toward the inner thigh for half butterfly."], [45, "Fold gently toward the right leg. Keep the extended knee soft if the hamstring feels intense."], [115, "Prepare to switch sides. Roll up slowly before moving the legs."], [120, "Switch sides. Extend the left leg and bring the right sole toward the inner thigh."], [165, "Let the head and shoulders release, and keep the fold easy enough that the breath stays smooth."], [230, "Use your hands to come upright and transition carefully into dragon pose."]] },
+          { name: "Dragon pose", duration: 240, image: assetPath("poses/lower-october-dragon.png"), support: "Pad the back knee and use blocks under the hands. Keep the front knee stacked over the ankle and stay high enough for steady breathing.", side: true, cues: [[0, "Step the right foot forward and lower the left knee to padding for dragon pose."], [45, "Place the hands on blocks and let the pelvis soften forward without collapsing into the low back."], [115, "Prepare to switch sides. Press into the blocks and step back with care."], [120, "Switch sides. Step the left foot forward and lower the right knee onto padding."], [165, "Keep the chest supported and the front knee steady over the ankle as the right hip flexor opens."], [230, "Walk the hands back in slowly and bring the knees wide for supported child's pose."]] },
+          { name: "Supported child's pose", duration: 180, image: assetPath("poses/lower-october-supported-childs-pose.png"), support: "Place a yoga block under the forehead so the neck can relax. Widen the knees and add a blanket under the hips or knees if needed.", cues: [[0, "Bring the knees wide, touch the big toes together, and fold forward into supported child's pose."], [45, "Set the forehead on a block so the head has steady support and the neck can soften."], [90, "Let the hips settle back toward the heels. Breathe into the low back, hips, and side ribs."], [135, "Keep the arms relaxed and the shoulders heavy. Add height under the head if the neck feels strained."], [170, "Press into the hands and slowly come upright. Your lower body October class is complete."]] }
+        ]
+      },
+      {
         id: "foam",
         title: "15-Minute Foam Roller Recovery",
         menuTitle: "Foam Roller",
@@ -645,7 +659,7 @@
       }
     ];
 
-    const featuredClassOrder = ["upper-august", "lower-august"];
+    const featuredClassOrder = ["upper-august", "lower-august", "lower-october"];
     classes.sort((a, b) => {
       const aOrder = featuredClassOrder.indexOf(a.id);
       const bOrder = featuredClassOrder.indexOf(b.id);
