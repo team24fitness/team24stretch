@@ -659,7 +659,21 @@
       }
     ];
 
-    const featuredClassOrder = ["lower-october", "upper-august", "lower-august"];
+    classes.push({
+      id: "lower-november",
+      title: "13-Minute Lower Body November",
+      menuTitle: "Lower Body November",
+      menuSubtitle: "Quads, heels, child pose, yogi squat",
+      total: 780,
+      manualClosing: true,
+      stretches: [
+        { name: "Stomach quad stretch", duration: 240, image: assetPath("poses/lower-november-prone-quad.png"), side: true, support: "Keep the pelvis heavy and knees comfortable. Use a strap if reaching the ankle is difficult. Release if the knee or low back hurts.", cues: [[0, "Lie on your stomach. Rest your forehead on your left forearm, bend the right knee, and gently hold the right ankle or a strap. Keep the pelvis grounded."], [60, "Ease the heel toward the buttock only until you feel a mild stretch in the front thigh. Avoid arching the low back."], [110, "Prepare to switch. Release the foot slowly."], [120, "Switch sides. Rest the forehead on the right forearm, bend the left knee, and hold the left ankle gently."], [180, "Keep both front hip bones heavy and breathe naturally. Reduce the bend if the knee feels pressure."], [228, "Release the ankle and use your hands to come up to kneeling for the sit-on-heels stretch."]] },
+        { name: "Sit-on-heels stretch", duration: 180, image: assetPath("poses/lower-november-sit-on-heels.png"), support: "Keep the tops of the feet flat and toes untucked. Add a folded blanket between the hips and heels if needed; come out for knee or ankle pain.", cues: [[0, "Kneel with the tops of the feet flat and toes pointing back. Lower the hips gently toward the heels and rest the hands on the thighs."], [45, "Sit tall with soft shoulders. Place a folded blanket between hips and heels if you need more space."], [90, "Feel a gentle stretch across the fronts of the ankles. Keep pressure comfortable and come out if the knees hurt."], [165, "Lean forward onto your hands and widen the knees for child pose."]] },
+        { name: "Child pose", duration: 120, image: assetPath("poses/lower-november-child.png"), support: "Let the hips move toward the heels without forcing. Support the forehead with a folded blanket if the floor is too far away.", cues: [[0, "Bring the big toes together and open the knees comfortably. Fold forward, reaching the hands ahead and resting the forehead down."], [40, "Let the hips soften toward the heels. Breathe into the back ribs and keep the neck relaxed."], [80, "Soften the shoulders and use a blanket under the forehead or knees if needed."], [108, "Press into the hands and come up slowly. Bring the feet forward carefully to prepare for yogi squat."]] },
+        { name: "Yogi squat", duration: 240, image: assetPath("poses/lower-november-yogi-squat.png"), support: "Turn the feet out comfortably and let knees follow the toes. Sit on a block or support the heels with a folded blanket as needed. Take breaks whenever needed.", cues: [[0, "Place the feet slightly wider than the hips with toes turned out comfortably. Bend the knees into yogi squat, using a block under the seat if needed."], [60, "Bring the palms together and let the elbows touch the inner knees gently. Keep the chest comfortably lifted."], [120, "Let the knees follow the direction of the toes. Support the heels if they lift and avoid forcing the hips lower."], [180, "Keep breathing smoothly. Come higher or take a brief break if the knees or ankles feel strained."], [228, "Place the hands down and ease into a comfortable seated position. Your lower body November class is complete."]] }
+      ]
+    });
+    const featuredClassOrder = ["lower-november", "lower-october", "upper-august", "lower-august"];
     classes.sort((a, b) => {
       const aOrder = featuredClassOrder.indexOf(a.id);
       const bOrder = featuredClassOrder.indexOf(b.id);
